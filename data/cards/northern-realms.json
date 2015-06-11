@@ -4,158 +4,187 @@
   "cards": [
     {
       "name": "Foltest, King of Temeria",
+      "slug": "foltest-king-of-temeria",
       "type": "Leader",
       "ability": "Instantly play an Impenetrable Fog from your deck"
     },
     {
       "name": "Foltest, Lord Commander Of The North",
+      "slug": "foltest-lord-commander-of-the-north",
       "type": "Leader",
       "ability": "Clear all weather effects"
     },
     {
       "name": "Foltest The Steel-forged",
+      "slug": "foltest-the-steel-forged",
       "type": "Leader",
       "ability": "Destroy enemy’s siege units if their combined strength is over 10"
     },
     {
       "name": "Foltest The Siegemaster",
+      "slug": "foltest-the-siegemaster",
       "type": "Leader",
       "ability": "Double the strength of your siege units if you have a Commander’s Horn in the row"
     },
     {
       "name": "Philippa Eilhart",
+      "slug": "philippa-eilhart",
       "type": "HeroRanged",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Vernon Roche",
+      "slug": "vernon-roche",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Esterad Thyssen",
+      "slug": "esterad-thyssen",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "John Natalis",
+      "slug": "john-natalis",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Thaler",
+      "slug": "thaler",
       "type": "Siege",
       "ability": "Spy",
       "strength": "1"
     },
     {
       "name": "Redanian Foot Soldier",
+      "slug": "redanian-foot-soldier",
       "type": "Melee",
       "strength": "1"
     },
     {
       "name": "Poor Fucking Infantry",
+      "slug": "poor-fucking-infantry",
       "type": "Melee",
       "ability": "Tight Bond",
       "strength": "1"
     },
     {
       "name": "Kaedweni Siege Expert",
+      "slug": "kaedweni-siege-expert",
       "type": "Siege",
       "ability": "Morale Boost",
       "strength": "1"
     },
     {
       "name": "Yarpen Zigrin",
+      "slug": "yarpen-zigrin",
       "type": "Melee",
       "strength": "2"
     },
     {
       "name": "Sigismund Dijkstra",
+      "slug": "sigismund-dijkstra",
       "type": "Melee",
       "ability": "Spy",
       "strength": "4"
     },
     {
       "name": "Sheldon Skaggs",
+      "slug": "sheldon-skaggs",
       "type": "Ranged",
       "strength": "4"
     },
     {
       "name": "Blue Stripes Commando",
+      "slug": "blue-stripes-commando",
       "type": "Melee",
       "ability": "Tight Bond",
       "strength": "4"
     },
     {
       "name": "Sabrina Gevissig",
+      "slug": "sabrina-gevissig",
       "type": "Ranged",
       "strength": "4"
     },
     {
       "name": "Ves",
+      "slug": "ves",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Siegfried of Denesle",
+      "slug": "siegfried-of-denesle",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Prince Stennis",
+      "slug": "prince-stennis",
       "type": "Melee",
       "ability": "Spy",
       "strength": "5"
     },
     {
       "name": "Crinfrid Reavers Dragon Hunter",
+      "slug": "crinfrid-reavers-dragon-hunter",
       "type": "Ranged",
       "ability": "Tight Bond",
       "strength": "5"
     },
     {
       "name": "Keira Metz",
+      "slug": "keira-metz",
       "type": "Ranged",
       "strength": "5"
     },
     {
       "name": "Dun Banner Medic",
+      "slug": "dun-banner-medic",
       "type": "Siege",
       "ability": "Medic",
       "strength": "5"
     },
     {
       "name": "Sile de Tansarville",
+      "slug": "sile-de-tansarville",
       "type": "Ranged",
       "strength": "5"
     },
     {
       "name": "Siege Tower",
+      "slug": "siege-tower",
       "type": "Siege",
       "strength": "6"
     },
     {
       "name": "Dethmold",
+      "slug": "dethmold",
       "type": "Ranged",
       "strength": "6"
     },
     {
       "name": "Trebuchet",
+      "slug": "trebuchet",
       "type": "Siege",
       "strength": "6"
     },
     {
       "name": "Ballista",
+      "slug": "ballista",
       "type": "Siege",
       "strength": "6"
     },
     {
       "name": "Catapult",
+      "slug": "catapult",
       "type": "Siege",
       "ability": "Tight Bond",
       "strength": "8"

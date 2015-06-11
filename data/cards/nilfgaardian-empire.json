@@ -4,163 +4,193 @@
   "cards": [
     {
       "name": "Emhyr var Emreis,\r\nHis Imperial Majesty",
+      "slug": "emhyr-var-emreis-his-imperial-majesty",
       "type": "Leader",
       "ability": "Play a Torrential Rain from your deck"
     },
     {
       "name": "Tibor Eggebracht",
+      "slug": "tibor-eggebracht",
       "type": "HeroRanged",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Letho of Gulet",
+      "slug": "letho-of-gulet",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Morvran Voorhis",
+      "slug": "morvran-voorhis",
       "type": "HeroSiege",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Menno Coehoorn",
+      "slug": "menno-coehoorn",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Siege Technician",
+      "slug": "siege-technician",
       "type": "Siege",
       "ability": "Medic",
       "strength": "0"
     },
     {
       "name": "Etolian Auxiliary Archers",
+      "slug": "etolian-auxiliary-archers",
       "type": "Ranged",
       "ability": "Medic",
       "strength": "1"
     },
     {
       "name": "Albrich",
+      "slug": "albrich",
       "type": "Ranged",
       "strength": "2"
     },
     {
       "name": "Sweers",
+      "slug": "sweers",
       "type": "Ranged",
       "strength": "2"
     },
     {
       "name": "Nausicaa Cavalry Rider",
+      "slug": "nausicaa-cavalry-rider",
       "type": "Melee",
       "ability": "Tight Bond",
       "strength": "2"
     },
     {
       "name": "Vreemde",
+      "slug": "vreemde",
       "type": "Melee",
       "strength": "2"
     },
     {
       "name": "Rotten Mangonel",
+      "slug": "rotten-mangonel",
       "type": "Siege",
       "strength": "3"
     },
     {
       "name": "Morteisen",
+      "slug": "morteisen",
       "type": "Melee",
       "strength": "3"
     },
     {
       "name": "Puttkammer",
+      "slug": "puttkammer",
       "type": "Ranged",
       "strength": "3"
     },
     {
       "name": "Impera Brigade Guard",
+      "slug": "impera-brigade-guard",
       "type": "Melee",
       "ability": "Tight Bond",
       "strength": "3"
     },
     {
       "name": "Vanhemar",
+      "slug": "vanhemar",
       "type": "Ranged",
       "strength": "4"
     },
     {
       "name": "Vattier de Rideaux",
+      "slug": "vattier-de-rideaux",
       "type": "Melee",
       "ability": "Spy",
       "strength": "4"
     },
     {
       "name": "Rainfarn",
+      "slug": "rainfarn",
       "type": "Melee",
       "strength": "4"
     },
     {
       "name": "Cynthia",
+      "slug": "cynthia",
       "type": "Ranged",
       "strength": "4"
     },
     {
       "name": "Zerrikanian Fire Scorpion",
+      "slug": "zerrikanian-fire-scorpion",
       "type": "Siege",
       "strength": "5"
     },
     {
       "name": "Young Emmisary",
+      "slug": "young-emmisary",
       "type": "Melee",
       "ability": "Tight Bond",
       "strength": "5"
     },
     {
       "name": "Renuald Aep Matsen",
+      "slug": "renuald-aep-matsen",
       "type": "Ranged",
       "strength": "5"
     },
     {
       "name": "Siege Engineer",
+      "slug": "siege-engineer",
       "type": "Siege",
       "strength": "6"
     },
     {
       "name": "Cahir Mawr Dyffryn aep Ceallach",
+      "slug": "cahir-mawr-dyffryn-aep-ceallach",
       "type": "Melee",
       "strength": "6"
     },
     {
       "name": "Fringilla Vigo",
+      "slug": "fringilla-vigo",
       "type": "Ranged",
       "strength": "6"
     },
     {
       "name": "Assire var Anahid",
+      "slug": "assire-var-anahid",
       "type": "Ranged",
       "strength": "6"
     },
     {
       "name": "Shilard Fitz-Oesterlen",
+      "slug": "shilard-fitz-oesterlen",
       "type": "Melee",
       "ability": "Spy",
       "strength": "7"
     },
     {
       "name": "Stefan Skellen",
+      "slug": "stefan-skellen",
       "type": "Melee",
       "ability": "Spy",
       "strength": "9"
     },
     {
       "name": "Heavy Zerrikanian Fire Scorpion",
+      "slug": "heavy-zerrikanian-fire-scorpion",
       "type": "Siege",
       "strength": "10"
     },
     {
       "name": "Black Infantry Archer",
+      "slug": "black-infantry-archer",
       "type": "Ranged",
       "strength": "10"
     }

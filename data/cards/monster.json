@@ -4,208 +4,246 @@
   "cards": [
     {
       "name": "Eredin, Commander of the Red Riders",
+      "slug": "eredin-commander-of-the-red-riders",
       "type": "Leader",
       "ability": "Play a weather card from your deck"
     },
     {
       "name": "Eredin, Bringer of Death",
+      "slug": "eredin-bringer-of-death",
       "type": "Leader",
       "ability": "Discard 2 cards and draw 1 of your choosing"
     },
     {
       "name": "Eredin, Destroyer of Worlds",
+      "slug": "eredin-destroyer-of-worlds",
       "type": "Leader",
       "ability": "Take one card from the discard pile"
     },
     {
       "name": "Eredin, King of The Wild Hunt",
+      "slug": "eredin-king-of-the-wild-hunt",
       "type": "Leader",
       "ability": "Double the strength of Melee row, unless there’s a Commander’s Horn"
     },
     {
       "name": "Kayran",
+      "slug": "kayran",
       "type": "HeroRanged",
       "ability": "MoraleImmune to special cards",
       "strength": "8"
     },
     {
       "name": "Leshen",
+      "slug": "leshen",
       "type": "HeroRanged",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Imlerith",
+      "slug": "imlerith",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Draug",
+      "slug": "draug",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Ghoul",
+      "slug": "ghoul",
       "type": "Melee",
       "ability": "Muster",
       "strength": "1"
     },
     {
       "name": "Nekker",
+      "slug": "nekker",
       "type": "Melee",
       "ability": "Muster",
       "strength": "2"
     },
     {
       "name": "Wyvern",
+      "slug": "wyvern",
       "type": "Ranged",
       "strength": "2"
     },
     {
       "name": "Foglet",
+      "slug": "foglet",
       "type": "Melee",
       "strength": "2"
     },
     {
       "name": "Celaeno Harpy",
+      "slug": "celaeno-harpy",
       "type": "Ranged",
       "strength": "2"
     },
     {
       "name": "Gargoyle",
+      "slug": "gargoyle",
       "type": "Ranged",
       "strength": "2"
     },
     {
       "name": "Cockatrice",
+      "slug": "cockatrice",
       "type": "Ranged",
       "strength": "2"
     },
     {
       "name": "Harpy",
+      "slug": "harpy",
       "type": "Ranged",
       "ability": "Agile",
       "strength": "2"
     },
     {
       "name": "Endrega",
+      "slug": "endrega",
       "type": "Ranged",
       "strength": "2"
     },
     {
       "name": "Vampire: Bruxa",
+      "slug": "vampire-bruxa",
       "type": "Melee",
       "ability": "Muster",
       "strength": "4"
     },
     {
       "name": "Vampire: Fleder",
+      "slug": "vampire-fleder",
       "type": "Melee",
       "ability": "Muster",
       "strength": "4"
     },
     {
       "name": "Vampire: Garkain",
+      "slug": "vampire-garkain",
       "type": "Melee",
       "ability": "Muster",
       "strength": "4"
     },
     {
       "name": "Vampire: Ekimmara",
+      "slug": "vampire-ekimmara",
       "type": "Melee",
       "ability": "Muster",
       "strength": "4"
     },
     {
       "name": "Arachas",
+      "slug": "arachas",
       "type": "Melee",
       "ability": "Muster",
       "strength": "4"
     },
     {
       "name": "Botchling",
+      "slug": "botchling",
       "type": "Melee",
       "strength": "4"
     },
     {
       "name": "Forktail",
+      "slug": "forktail",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Plague Maiden",
+      "slug": "plague-maiden",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Griffin",
+      "slug": "griffin",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Werewolf",
+      "slug": "werewolf",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Frightener",
+      "slug": "frightener",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Ice Giant",
+      "slug": "ice-giant",
       "type": "Siege",
       "strength": "5"
     },
     {
       "name": "Grave Hag",
+      "slug": "grave-hag",
       "type": "Ranged",
       "strength": "5"
     },
     {
       "name": "Vampire: Katakan",
+      "slug": "vampire-katakan",
       "type": "Melee",
       "ability": "Muster",
       "strength": "5"
     },
     {
       "name": "Crone: Whispess",
+      "slug": "crone-whispess",
       "type": "Melee",
       "ability": "Muster",
       "strength": "6"
     },
     {
       "name": "Crone: Brewess",
+      "slug": "crone-brewess",
       "type": "Melee",
       "ability": "Muster",
       "strength": "6"
     },
     {
       "name": "Crone: Weavess",
+      "slug": "crone-weavess",
       "type": "Melee",
       "ability": "Muster",
       "strength": "6"
     },
     {
       "name": "Arachas Behemoth",
+      "slug": "arachas-behemoth",
       "type": "Siege",
       "ability": "Muster",
       "strength": "6"
     },
     {
       "name": "Fire Elemental",
+      "slug": "fire-elemental",
       "type": "Siege",
       "strength": "6"
     },
     {
       "name": "Fiend",
+      "slug": "fiend",
       "type": "Melee",
       "strength": "6"
     },
     {
       "name": "Earth Elemental",
+      "slug": "earth-elemental",
       "type": "Siege",
       "strength": "6"
     }

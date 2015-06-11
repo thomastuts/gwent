@@ -4,57 +4,67 @@
   "cards": [
     {
       "name": "Geralt of Rivia",
+      "slug": "geralt-of-rivia",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "15"
     },
     {
       "name": "Cirilla Fiona Elen Riannon",
+      "slug": "cirilla-fiona-elen-riannon",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "15"
     },
     {
       "name": "Yennefer of Vengerberg",
+      "slug": "yennefer-of-vengerberg",
       "type": "HeroRanged",
       "ability": "MedicImmune to special cards",
       "strength": "7"
     },
     {
       "name": "Triss Merigold",
+      "slug": "triss-merigold",
       "type": "HeroMelee",
       "ability": "Immune to special cards",
       "strength": "7"
     },
     {
       "name": "Avallac’h",
+      "slug": "avallach",
       "type": "HeroMelee",
       "ability": "SpyImmune to special cards",
       "strength": "0"
     },
     {
       "name": "Dandelion",
+      "slug": "dandelion",
       "type": "Melee",
       "ability": "Morale",
       "strength": "2"
     },
     {
       "name": "Zoltan Chivay",
+      "slug": "zoltan-chivay",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Emiel Regis Rohellec Terzieff",
+      "slug": "emiel-regis-rohellec-terzieff",
       "type": "Melee",
       "strength": "5"
     },
     {
       "name": "Vesemir",
+      "slug": "vesemir",
       "type": "Melee",
       "strength": "6"
     },
     {
       "name": "Villentretenmerth",
+      "slug": "villentretenmerth",
       "type": "Melee",
       "ability": "Scorch",
       "strength": "7"

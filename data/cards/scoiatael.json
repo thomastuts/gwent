@@ -4,136 +4,160 @@
   "cards": [
     {
       "name": "Francesca, Pureblood Elf",
+      "slug": "francesca-pureblood-elf",
       "type": "Leader",
       "ability": "Play Bitting Frost from you deck"
     },
     {
       "name": "Saesenthessis",
+      "slug": "saesenthessis",
       "type": "HeroRanged",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Iorveth",
+      "slug": "iorveth",
       "type": "HeroRanged",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Isengrim Faoiltiarnah",
+      "slug": "isengrim-faoiltiarnah",
       "type": "HeroMelee",
       "ability": "Morale, Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Eithne",
+      "slug": "eithne",
       "type": "HeroRanged",
       "ability": "Immune to special cards",
       "strength": "10"
     },
     {
       "name": "Havekar Healer",
+      "slug": "havekar-healer",
       "type": "Ranged",
       "strength": "0"
     },
     {
       "name": "Riordain",
+      "slug": "riordain",
       "type": "Ranged",
       "strength": "1"
     },
     {
       "name": "Toruviel",
+      "slug": "toruviel",
       "type": "Ranged",
       "strength": "2"
     },
     {
       "name": "Elven Skirmisher",
+      "slug": "elven-skirmisher",
       "type": "Ranged",
       "ability": "Muster",
       "strength": "2"
     },
     {
       "name": "Dwarven Skirmisher",
+      "slug": "dwarven-skirmisher",
       "type": "Melee",
       "ability": "Muster",
       "strength": "3"
     },
     {
       "name": "Ciaran aep Easnillien",
+      "slug": "ciaran-aep-easnillien",
       "type": "Ranged",
       "ability": "Agile",
       "strength": "3"
     },
     {
       "name": "Vrihedd Brigade Recruit",
+      "slug": "vrihedd-brigade-recruit",
       "type": "Ranged",
       "strength": "4"
     },
     {
       "name": "Dol Blathanna Archer",
+      "slug": "dol-blathanna-archer",
       "type": "Ranged",
       "strength": "4"
     },
     {
       "name": "Hav’caaren Medic",
+      "slug": "havcaaren-medic",
       "type": "Melee",
       "ability": "Muster",
       "strength": "5"
     },
     {
       "name": "Havekar Smuggler",
+      "slug": "havekar-smuggler",
       "type": "Melee",
       "ability": "Spy",
       "strength": "5"
     },
     {
       "name": "Mahakaman Defender",
+      "slug": "mahakaman-defender",
       "type": "Melee",
       "ability": "Muster",
       "strength": "5"
     },
     {
       "name": "Vrihedd Brigade Veteran",
+      "slug": "vrihedd-brigade-veteran",
       "type": "Melee",
       "ability": "Agile",
       "strength": "5"
     },
     {
       "name": "Dennis Cranmer",
+      "slug": "dennis-cranmer",
       "type": "Melee",
       "strength": "6"
     },
     {
       "name": "Filavandrel",
+      "slug": "filavandrel",
       "type": "Ranged",
       "ability": "Agile",
       "strength": "6"
     },
     {
       "name": "Ida Emean",
+      "slug": "ida-emean",
       "type": "Ranged",
       "strength": "6"
     },
     {
       "name": "Yaevinn",
+      "slug": "yaevinn",
       "type": "Melee",
       "ability": "Agile",
       "strength": "6"
     },
     {
       "name": "Barclay Els",
+      "slug": "barclay-els",
       "type": "Melee",
       "ability": "Agile",
       "strength": "6"
     },
     {
       "name": "Dol Blathanna Scout",
+      "slug": "dol-blathanna-scout",
       "type": "Melee",
       "ability": "Agile",
       "strength": "6"
     },
     {
       "name": "Milva",
+      "slug": "milva",
       "type": "Ranged",
       "ability": "Morale",
       "strength": "10"
