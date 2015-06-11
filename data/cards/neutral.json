@@ -1,0 +1,63 @@
+{
+  "name": "Neutral",
+  "slug": "neutral",
+  "cards": [
+    {
+      "name": "Geralt of Rivia",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "15"
+    },
+    {
+      "name": "Cirilla Fiona Elen Riannon",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "15"
+    },
+    {
+      "name": "Yennefer of Vengerberg",
+      "type": "HeroRanged",
+      "ability": "MedicImmune to special cards",
+      "strength": "7"
+    },
+    {
+      "name": "Triss Merigold",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "7"
+    },
+    {
+      "name": "Avallac’h",
+      "type": "HeroMelee",
+      "ability": "SpyImmune to special cards",
+      "strength": "0"
+    },
+    {
+      "name": "Dandelion",
+      "type": "Melee",
+      "ability": "Morale",
+      "strength": "2"
+    },
+    {
+      "name": "Zoltan Chivay",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Emiel Regis Rohellec Terzieff",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Vesemir",
+      "type": "Melee",
+      "strength": "6"
+    },
+    {
+      "name": "Villentretenmerth",
+      "type": "Melee",
+      "ability": "Scorch",
+      "strength": "7"
+    }
+  ]
+}

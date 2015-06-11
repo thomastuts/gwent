@@ -1,0 +1,168 @@
+{
+  "name": "Nilfgaardian Empire",
+  "slug": "nilfgaardian-empire",
+  "cards": [
+    {
+      "name": "Emhyr var Emreis,\r\nHis Imperial Majesty",
+      "type": "Leader",
+      "ability": "Play a Torrential Rain from your deck"
+    },
+    {
+      "name": "Tibor Eggebracht",
+      "type": "HeroRanged",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Letho of Gulet",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Morvran Voorhis",
+      "type": "HeroSiege",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Menno Coehoorn",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Siege Technician",
+      "type": "Siege",
+      "ability": "Medic",
+      "strength": "0"
+    },
+    {
+      "name": "Etolian Auxiliary Archers",
+      "type": "Ranged",
+      "ability": "Medic",
+      "strength": "1"
+    },
+    {
+      "name": "Albrich",
+      "type": "Ranged",
+      "strength": "2"
+    },
+    {
+      "name": "Sweers",
+      "type": "Ranged",
+      "strength": "2"
+    },
+    {
+      "name": "Nausicaa Cavalry Rider",
+      "type": "Melee",
+      "ability": "Tight Bond",
+      "strength": "2"
+    },
+    {
+      "name": "Vreemde",
+      "type": "Melee",
+      "strength": "2"
+    },
+    {
+      "name": "Rotten Mangonel",
+      "type": "Siege",
+      "strength": "3"
+    },
+    {
+      "name": "Morteisen",
+      "type": "Melee",
+      "strength": "3"
+    },
+    {
+      "name": "Puttkammer",
+      "type": "Ranged",
+      "strength": "3"
+    },
+    {
+      "name": "Impera Brigade Guard",
+      "type": "Melee",
+      "ability": "Tight Bond",
+      "strength": "3"
+    },
+    {
+      "name": "Vanhemar",
+      "type": "Ranged",
+      "strength": "4"
+    },
+    {
+      "name": "Vattier de Rideaux",
+      "type": "Melee",
+      "ability": "Spy",
+      "strength": "4"
+    },
+    {
+      "name": "Rainfarn",
+      "type": "Melee",
+      "strength": "4"
+    },
+    {
+      "name": "Cynthia",
+      "type": "Ranged",
+      "strength": "4"
+    },
+    {
+      "name": "Zerrikanian Fire Scorpion",
+      "type": "Siege",
+      "strength": "5"
+    },
+    {
+      "name": "Young Emmisary",
+      "type": "Melee",
+      "ability": "Tight Bond",
+      "strength": "5"
+    },
+    {
+      "name": "Renuald Aep Matsen",
+      "type": "Ranged",
+      "strength": "5"
+    },
+    {
+      "name": "Siege Engineer",
+      "type": "Siege",
+      "strength": "6"
+    },
+    {
+      "name": "Cahir Mawr Dyffryn aep Ceallach",
+      "type": "Melee",
+      "strength": "6"
+    },
+    {
+      "name": "Fringilla Vigo",
+      "type": "Ranged",
+      "strength": "6"
+    },
+    {
+      "name": "Assire var Anahid",
+      "type": "Ranged",
+      "strength": "6"
+    },
+    {
+      "name": "Shilard Fitz-Oesterlen",
+      "type": "Melee",
+      "ability": "Spy",
+      "strength": "7"
+    },
+    {
+      "name": "Stefan Skellen",
+      "type": "Melee",
+      "ability": "Spy",
+      "strength": "9"
+    },
+    {
+      "name": "Heavy Zerrikanian Fire Scorpion",
+      "type": "Siege",
+      "strength": "10"
+    },
+    {
+      "name": "Black Infantry Archer",
+      "type": "Ranged",
+      "strength": "10"
+    }
+  ]
+}

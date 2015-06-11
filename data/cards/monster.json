@@ -1,0 +1,213 @@
+{
+  "name": "Monster",
+  "slug": "monster",
+  "cards": [
+    {
+      "name": "Eredin, Commander of the Red Riders",
+      "type": "Leader",
+      "ability": "Play a weather card from your deck"
+    },
+    {
+      "name": "Eredin, Bringer of Death",
+      "type": "Leader",
+      "ability": "Discard 2 cards and draw 1 of your choosing"
+    },
+    {
+      "name": "Eredin, Destroyer of Worlds",
+      "type": "Leader",
+      "ability": "Take one card from the discard pile"
+    },
+    {
+      "name": "Eredin, King of The Wild Hunt",
+      "type": "Leader",
+      "ability": "Double the strength of Melee row, unless there’s a Commander’s Horn"
+    },
+    {
+      "name": "Kayran",
+      "type": "HeroRanged",
+      "ability": "MoraleImmune to special cards",
+      "strength": "8"
+    },
+    {
+      "name": "Leshen",
+      "type": "HeroRanged",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Imlerith",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Draug",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Ghoul",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "1"
+    },
+    {
+      "name": "Nekker",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "2"
+    },
+    {
+      "name": "Wyvern",
+      "type": "Ranged",
+      "strength": "2"
+    },
+    {
+      "name": "Foglet",
+      "type": "Melee",
+      "strength": "2"
+    },
+    {
+      "name": "Celaeno Harpy",
+      "type": "Ranged",
+      "strength": "2"
+    },
+    {
+      "name": "Gargoyle",
+      "type": "Ranged",
+      "strength": "2"
+    },
+    {
+      "name": "Cockatrice",
+      "type": "Ranged",
+      "strength": "2"
+    },
+    {
+      "name": "Harpy",
+      "type": "Ranged",
+      "ability": "Agile",
+      "strength": "2"
+    },
+    {
+      "name": "Endrega",
+      "type": "Ranged",
+      "strength": "2"
+    },
+    {
+      "name": "Vampire: Bruxa",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "4"
+    },
+    {
+      "name": "Vampire: Fleder",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "4"
+    },
+    {
+      "name": "Vampire: Garkain",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "4"
+    },
+    {
+      "name": "Vampire: Ekimmara",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "4"
+    },
+    {
+      "name": "Arachas",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "4"
+    },
+    {
+      "name": "Botchling",
+      "type": "Melee",
+      "strength": "4"
+    },
+    {
+      "name": "Forktail",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Plague Maiden",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Griffin",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Werewolf",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Frightener",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Ice Giant",
+      "type": "Siege",
+      "strength": "5"
+    },
+    {
+      "name": "Grave Hag",
+      "type": "Ranged",
+      "strength": "5"
+    },
+    {
+      "name": "Vampire: Katakan",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "5"
+    },
+    {
+      "name": "Crone: Whispess",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "6"
+    },
+    {
+      "name": "Crone: Brewess",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "6"
+    },
+    {
+      "name": "Crone: Weavess",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "6"
+    },
+    {
+      "name": "Arachas Behemoth",
+      "type": "Siege",
+      "ability": "Muster",
+      "strength": "6"
+    },
+    {
+      "name": "Fire Elemental",
+      "type": "Siege",
+      "strength": "6"
+    },
+    {
+      "name": "Fiend",
+      "type": "Melee",
+      "strength": "6"
+    },
+    {
+      "name": "Earth Elemental",
+      "type": "Siege",
+      "strength": "6"
+    }
+  ]
+}

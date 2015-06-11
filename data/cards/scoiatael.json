@@ -1,0 +1,142 @@
+{
+  "name": "Scoia’tael",
+  "slug": "scoiatael",
+  "cards": [
+    {
+      "name": "Francesca, Pureblood Elf",
+      "type": "Leader",
+      "ability": "Play Bitting Frost from you deck"
+    },
+    {
+      "name": "Saesenthessis",
+      "type": "HeroRanged",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Iorveth",
+      "type": "HeroRanged",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Isengrim Faoiltiarnah",
+      "type": "HeroMelee",
+      "ability": "Morale, Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Eithne",
+      "type": "HeroRanged",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Havekar Healer",
+      "type": "Ranged",
+      "strength": "0"
+    },
+    {
+      "name": "Riordain",
+      "type": "Ranged",
+      "strength": "1"
+    },
+    {
+      "name": "Toruviel",
+      "type": "Ranged",
+      "strength": "2"
+    },
+    {
+      "name": "Elven Skirmisher",
+      "type": "Ranged",
+      "ability": "Muster",
+      "strength": "2"
+    },
+    {
+      "name": "Dwarven Skirmisher",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "3"
+    },
+    {
+      "name": "Ciaran aep Easnillien",
+      "type": "Ranged",
+      "ability": "Agile",
+      "strength": "3"
+    },
+    {
+      "name": "Vrihedd Brigade Recruit",
+      "type": "Ranged",
+      "strength": "4"
+    },
+    {
+      "name": "Dol Blathanna Archer",
+      "type": "Ranged",
+      "strength": "4"
+    },
+    {
+      "name": "Hav’caaren Medic",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "5"
+    },
+    {
+      "name": "Havekar Smuggler",
+      "type": "Melee",
+      "ability": "Spy",
+      "strength": "5"
+    },
+    {
+      "name": "Mahakaman Defender",
+      "type": "Melee",
+      "ability": "Muster",
+      "strength": "5"
+    },
+    {
+      "name": "Vrihedd Brigade Veteran",
+      "type": "Melee",
+      "ability": "Agile",
+      "strength": "5"
+    },
+    {
+      "name": "Dennis Cranmer",
+      "type": "Melee",
+      "strength": "6"
+    },
+    {
+      "name": "Filavandrel",
+      "type": "Ranged",
+      "ability": "Agile",
+      "strength": "6"
+    },
+    {
+      "name": "Ida Emean",
+      "type": "Ranged",
+      "strength": "6"
+    },
+    {
+      "name": "Yaevinn",
+      "type": "Melee",
+      "ability": "Agile",
+      "strength": "6"
+    },
+    {
+      "name": "Barclay Els",
+      "type": "Melee",
+      "ability": "Agile",
+      "strength": "6"
+    },
+    {
+      "name": "Dol Blathanna Scout",
+      "type": "Melee",
+      "ability": "Agile",
+      "strength": "6"
+    },
+    {
+      "name": "Milva",
+      "type": "Ranged",
+      "ability": "Morale",
+      "strength": "10"
+    }
+  ]
+}

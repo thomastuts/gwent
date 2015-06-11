@@ -1,0 +1,164 @@
+{
+  "name": "Northern Realms",
+  "slug": "northern-realms",
+  "cards": [
+    {
+      "name": "Foltest, King of Temeria",
+      "type": "Leader",
+      "ability": "Instantly play an Impenetrable Fog from your deck"
+    },
+    {
+      "name": "Foltest, Lord Commander Of The North",
+      "type": "Leader",
+      "ability": "Clear all weather effects"
+    },
+    {
+      "name": "Foltest The Steel-forged",
+      "type": "Leader",
+      "ability": "Destroy enemy’s siege units if their combined strength is over 10"
+    },
+    {
+      "name": "Foltest The Siegemaster",
+      "type": "Leader",
+      "ability": "Double the strength of your siege units if you have a Commander’s Horn in the row"
+    },
+    {
+      "name": "Philippa Eilhart",
+      "type": "HeroRanged",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Vernon Roche",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Esterad Thyssen",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "John Natalis",
+      "type": "HeroMelee",
+      "ability": "Immune to special cards",
+      "strength": "10"
+    },
+    {
+      "name": "Thaler",
+      "type": "Siege",
+      "ability": "Spy",
+      "strength": "1"
+    },
+    {
+      "name": "Redanian Foot Soldier",
+      "type": "Melee",
+      "strength": "1"
+    },
+    {
+      "name": "Poor Fucking Infantry",
+      "type": "Melee",
+      "ability": "Tight Bond",
+      "strength": "1"
+    },
+    {
+      "name": "Kaedweni Siege Expert",
+      "type": "Siege",
+      "ability": "Morale Boost",
+      "strength": "1"
+    },
+    {
+      "name": "Yarpen Zigrin",
+      "type": "Melee",
+      "strength": "2"
+    },
+    {
+      "name": "Sigismund Dijkstra",
+      "type": "Melee",
+      "ability": "Spy",
+      "strength": "4"
+    },
+    {
+      "name": "Sheldon Skaggs",
+      "type": "Ranged",
+      "strength": "4"
+    },
+    {
+      "name": "Blue Stripes Commando",
+      "type": "Melee",
+      "ability": "Tight Bond",
+      "strength": "4"
+    },
+    {
+      "name": "Sabrina Gevissig",
+      "type": "Ranged",
+      "strength": "4"
+    },
+    {
+      "name": "Ves",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Siegfried of Denesle",
+      "type": "Melee",
+      "strength": "5"
+    },
+    {
+      "name": "Prince Stennis",
+      "type": "Melee",
+      "ability": "Spy",
+      "strength": "5"
+    },
+    {
+      "name": "Crinfrid Reavers Dragon Hunter",
+      "type": "Ranged",
+      "ability": "Tight Bond",
+      "strength": "5"
+    },
+    {
+      "name": "Keira Metz",
+      "type": "Ranged",
+      "strength": "5"
+    },
+    {
+      "name": "Dun Banner Medic",
+      "type": "Siege",
+      "ability": "Medic",
+      "strength": "5"
+    },
+    {
+      "name": "Sile de Tansarville",
+      "type": "Ranged",
+      "strength": "5"
+    },
+    {
+      "name": "Siege Tower",
+      "type": "Siege",
+      "strength": "6"
+    },
+    {
+      "name": "Dethmold",
+      "type": "Ranged",
+      "strength": "6"
+    },
+    {
+      "name": "Trebuchet",
+      "type": "Siege",
+      "strength": "6"
+    },
+    {
+      "name": "Ballista",
+      "type": "Siege",
+      "strength": "6"
+    },
+    {
+      "name": "Catapult",
+      "type": "Siege",
+      "ability": "Tight Bond",
+      "strength": "8"
+    }
+  ]
+}
