@@ -1,20 +1,20 @@
 var Board = require('./models/board');
-var Player = require('./models/player');
+var presetDeck = require('./preset-deck');
 
-var playerOne = new Player({
-  faction: 'monster',
-  deck: [
-    'ghoul',
-    'ghoul',
-    'nekker',
-    'wyvern',
-    'celaeno-harpy',
-    'celaeno-harpy',
-    'endrega',
-    'vampire-garkain',
-    'vampire-garkain',
-    'botchling',
-    'botchling',
-    'botchling'
-  ]
+var game = new Board(1);
+
+game.setPlayerOne({
+  name: 'Geralt'
 });
+
+game.playerOne.setDeck(presetDeck);
+game.playerOne.readyUp();
+
+game.setPlayerTwo({
+  name: 'Innkeeper'
+});
+
+game.playerTwo.setDeck(presetDeck);
+game.playerTwo.readyUp();
+
+game.startGame();
