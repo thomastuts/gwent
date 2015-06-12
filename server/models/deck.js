@@ -18,6 +18,7 @@ FACTION_NAMES.forEach(function (factionName) {
 
 function Deck(deck) {
   // TODO: implement deck validation
+  // TODO: add leader
   this.faction = deck.faction;
   this.cards = deck.cards;
   this.hand = [];
