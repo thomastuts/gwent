@@ -1,8 +1,9 @@
 var Player = require('./player');
+var Battlefield = require('./battlefield');
 
 function Board(boardId) {
   this.id = boardId;
-  this.activeWeatherEffects = [];
+  this.battlefield = new Battlefield();
 }
 
 Board.prototype.determineStartingPlayer = function () {
