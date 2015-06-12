@@ -5,43 +5,43 @@
     {
       "name": "Biting Frost",
       "slug": "biting-frost",
-      "type": "You start with it",
+      "type": "Special",
       "strength": "Sets the strength of all melee units to 1 for both players"
     },
     {
       "name": "Impenetrable Fog",
       "slug": "impenetrable-fog",
-      "type": "You start with it",
+      "type": "Special",
       "strength": "Sets the strength of all ranged units to 1 for both players"
     },
     {
       "name": "Torrential Rain",
       "slug": "torrential-rain",
-      "type": "You start with it",
+      "type": "Special",
       "strength": "Sets the strength of all siege units to 1 for both players"
     },
     {
       "name": "Clear Weather",
       "slug": "clear-weather",
-      "type": "You start with it",
+      "type": "Special",
       "strength": "Eliminates all weather effects from the board."
     },
     {
       "name": "Decoy",
       "slug": "decoy",
-      "type": "Elsa, White Orchard Tavern",
+      "type": "Special",
       "strength": "Swap with a card on the battlefield to return it to your hand."
     },
     {
       "name": "Scorch",
       "slug": "scorch",
-      "type": "Innkeeper, Cunny of the Goose, Novigrad",
+      "type": "Special",
       "strength": "Destroy all cards on the board with 7 strength or more."
     },
     {
       "name": "Commander’s Horn",
       "slug": "commanders-horn",
-      "type": "Innkeeper, Inn at the Crossroads",
+      "type": "Special",
       "strength": "Double the strength of a row (for that player only)."
     }
   ]

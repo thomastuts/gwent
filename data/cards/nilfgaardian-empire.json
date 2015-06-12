@@ -11,187 +11,212 @@
     {
       "name": "Tibor Eggebracht",
       "slug": "tibor-eggebracht",
-      "type": "HeroRanged",
-      "ability": "Immune to special cards",
+      "type": "Hero",
+      "row": "Ranged",
       "strength": "10"
     },
     {
       "name": "Letho of Gulet",
       "slug": "letho-of-gulet",
-      "type": "HeroMelee",
-      "ability": "Immune to special cards",
+      "type": "Hero",
+      "row": "Melee",
       "strength": "10"
     },
     {
       "name": "Morvran Voorhis",
       "slug": "morvran-voorhis",
-      "type": "HeroSiege",
-      "ability": "Immune to special cards",
+      "type": "Hero",
+      "row": "Siege",
       "strength": "10"
     },
     {
       "name": "Menno Coehoorn",
       "slug": "menno-coehoorn",
-      "type": "HeroMelee",
-      "ability": "Immune to special cards",
+      "type": "Hero",
+      "row": "Melee",
       "strength": "10"
     },
     {
       "name": "Siege Technician",
       "slug": "siege-technician",
-      "type": "Siege",
+      "type": "Unit",
+      "row": "Siege",
       "ability": "Medic",
       "strength": "0"
     },
     {
       "name": "Etolian Auxiliary Archers",
       "slug": "etolian-auxiliary-archers",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "ability": "Medic",
       "strength": "1"
     },
     {
       "name": "Albrich",
       "slug": "albrich",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "2"
     },
     {
       "name": "Sweers",
       "slug": "sweers",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "2"
     },
     {
       "name": "Nausicaa Cavalry Rider",
       "slug": "nausicaa-cavalry-rider",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "ability": "Tight Bond",
       "strength": "2"
     },
     {
       "name": "Vreemde",
       "slug": "vreemde",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "strength": "2"
     },
     {
       "name": "Rotten Mangonel",
       "slug": "rotten-mangonel",
-      "type": "Siege",
+      "type": "Unit",
+      "row": "Siege",
       "strength": "3"
     },
     {
       "name": "Morteisen",
       "slug": "morteisen",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "strength": "3"
     },
     {
       "name": "Puttkammer",
       "slug": "puttkammer",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "3"
     },
     {
       "name": "Impera Brigade Guard",
       "slug": "impera-brigade-guard",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "ability": "Tight Bond",
       "strength": "3"
     },
     {
       "name": "Vanhemar",
       "slug": "vanhemar",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "4"
     },
     {
       "name": "Vattier de Rideaux",
       "slug": "vattier-de-rideaux",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "ability": "Spy",
       "strength": "4"
     },
     {
       "name": "Rainfarn",
       "slug": "rainfarn",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "strength": "4"
     },
     {
       "name": "Cynthia",
       "slug": "cynthia",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "4"
     },
     {
       "name": "Zerrikanian Fire Scorpion",
       "slug": "zerrikanian-fire-scorpion",
-      "type": "Siege",
+      "type": "Unit",
+      "row": "Siege",
       "strength": "5"
     },
     {
       "name": "Young Emmisary",
       "slug": "young-emmisary",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "ability": "Tight Bond",
       "strength": "5"
     },
     {
       "name": "Renuald Aep Matsen",
       "slug": "renuald-aep-matsen",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "5"
     },
     {
       "name": "Siege Engineer",
       "slug": "siege-engineer",
-      "type": "Siege",
+      "type": "Unit",
+      "row": "Siege",
       "strength": "6"
     },
     {
       "name": "Cahir Mawr Dyffryn aep Ceallach",
       "slug": "cahir-mawr-dyffryn-aep-ceallach",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "strength": "6"
     },
     {
       "name": "Fringilla Vigo",
       "slug": "fringilla-vigo",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "6"
     },
     {
       "name": "Assire var Anahid",
       "slug": "assire-var-anahid",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "6"
     },
     {
       "name": "Shilard Fitz-Oesterlen",
       "slug": "shilard-fitz-oesterlen",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "ability": "Spy",
       "strength": "7"
     },
     {
       "name": "Stefan Skellen",
       "slug": "stefan-skellen",
-      "type": "Melee",
+      "type": "Unit",
+      "row": "Melee",
       "ability": "Spy",
       "strength": "9"
     },
     {
       "name": "Heavy Zerrikanian Fire Scorpion",
       "slug": "heavy-zerrikanian-fire-scorpion",
-      "type": "Siege",
+      "type": "Unit",
+      "row": "Siege",
       "strength": "10"
     },
     {
       "name": "Black Infantry Archer",
       "slug": "black-infantry-archer",
-      "type": "Ranged",
+      "type": "Unit",
+      "row": "Ranged",
       "strength": "10"
     }
   ]
