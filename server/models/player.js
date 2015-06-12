@@ -4,8 +4,7 @@ var STARTING_LIVES = 2;
 
 function Player(options) {
   this.name = options.name || 'Stranger';
-  this.deck = new Deck(options.faction, options.deck);
-  this.faction = options.faction;
+  this.deck = new Deck(options.deck);
   this.lives = STARTING_LIVES;
 }
 

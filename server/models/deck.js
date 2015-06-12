@@ -16,10 +16,10 @@ FACTION_NAMES.forEach(function (factionName) {
   cardsByFaction[factionName] = require(path.join('../../data/cards', factionName + '.json'));
 });
 
-function Deck(faction, cards) {
+function Deck(deck) {
   // TODO: implement deck validation
-  this.faction = faction;
-  this.cards = cards;
+  this.faction = deck.faction;
+  this.cards = deck.cards;
   this.hand = [];
 
   this.shuffleCards();
