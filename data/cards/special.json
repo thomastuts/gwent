@@ -5,43 +5,43 @@
     {
       "name": "Biting Frost",
       "slug": "biting-frost",
-      "type": "Special",
+      "type": "Weather",
       "strength": "Sets the strength of all melee units to 1 for both players"
     },
     {
       "name": "Impenetrable Fog",
       "slug": "impenetrable-fog",
-      "type": "Special",
+      "type": "Weather",
       "strength": "Sets the strength of all ranged units to 1 for both players"
     },
     {
       "name": "Torrential Rain",
       "slug": "torrential-rain",
-      "type": "Special",
+      "type": "Weather",
       "strength": "Sets the strength of all siege units to 1 for both players"
     },
     {
       "name": "Clear Weather",
       "slug": "clear-weather",
-      "type": "Special",
+      "type": "Weather",
       "strength": "Eliminates all weather effects from the board."
     },
     {
       "name": "Decoy",
       "slug": "decoy",
-      "type": "Special",
+      "type": "Decoy",
       "strength": "Swap with a card on the battlefield to return it to your hand."
     },
     {
       "name": "Scorch",
       "slug": "scorch",
-      "type": "Special",
+      "type": "Scorch",
       "strength": "Destroy all cards on the board with 7 strength or more."
     },
     {
       "name": "Commander’s Horn",
       "slug": "commanders-horn",
-      "type": "Special",
+      "type": "Horn",
       "strength": "Double the strength of a row (for that player only)."
     }
   ]

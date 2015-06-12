@@ -18,3 +18,9 @@ game.playerTwo.setDeck(presetDeck);
 game.playerTwo.readyUp();
 
 game.startGame();
+
+game.playCard('playerOne', 'zoltan-chivay');
+console.log(game.battlefield.playerOne);
+
+game.playCard('playerOne', 'biting-frost');
+console.log(game.battlefield.playerOne);

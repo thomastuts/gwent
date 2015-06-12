@@ -1,8 +1,9 @@
 var _ = require('lodash');
 var path = require('path');
 
-var CARDS_IN_HAND = 10;
+var isDebug = process.env.NODE_ENV === 'debug';
 
+var CARDS_IN_HAND = 10;
 var FACTION_NAMES = [
   'monster',
   'nilfgaardian-empire',
@@ -33,12 +34,18 @@ function Deck(deck) {
 
   this.faction = deck.faction;
   this.leader = deck.leader;
-  this.cards = deck.cards.map(function (card) {
-    return getCard(card, self.faction);
+  this.cards = deck.cards.map(function (cardSlug) {
+    var card = getCard(cardSlug, self.faction);
+    card.strength = parseInt(card.strength);
+    return card;
   });
+
   this.hand = [];
 
-  this.shuffleCards();
+  if (!isDebug) {
+    this.shuffleCards();
+  }
+
   this.drawHand();
 }
 
@@ -47,10 +54,20 @@ Deck.prototype.shuffleCards = function () {
 };
 
 Deck.prototype.drawHand = function () {
-  for (var i = 0; i < CARDS_IN_HAND; i++) {
-    this.hand.push(this.drawRandomCard());
-    this.sortHand();
+  if (isDebug) {
+    this.hand = this.cards.slice(0, CARDS_IN_HAND);
+    this.cards = this.cards.slice(CARDS_IN_HAND, this.cards.length);
   }
+  else {
+    for (var i = 0; i < CARDS_IN_HAND; i++) {
+      this.hand.push(this.drawRandomCard());
+    }
+  }
+  this.sortHand();
+};
+
+Deck.prototype.findCardInHand = function (cardSlug) {
+  return _.find(this.hand, {slug: cardSlug});
 };
 
 Deck.prototype.sortHand = function () {

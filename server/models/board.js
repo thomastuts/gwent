@@ -1,9 +1,13 @@
 var Player = require('./player');
 var Battlefield = require('./battlefield');
 
-function Board(boardId, debug) {
+// TODO: implement auth on socket to avoid other player playing actions for you
+
+var isDebug = process.env.NODE_ENV === 'debug';
+
+function Board(boardId) {
   this.id = boardId;
-  this.startingPlayer = debug ? 'playerOne' : this.determineStartingPlayer();
+  this.turn = isDebug ? 'playerOne' : this.determineStartingPlayer();
   this.inProgress = false;
   this.battlefield = new Battlefield();
 }
@@ -20,10 +24,37 @@ Board.prototype.startGame = function () {
   if (this.canGameStart()) {
     this.round = 1;
     this.inProgress = true;
-    console.log('Game started, starting player:', this.startingPlayer);
+    console.log('Game started, starting player:', this.turn);
   }
   else {
     throw new Error('Game cannot start yet');
+  }
+};
+
+Board.prototype.playCard = function (player, cardSlug) {
+  if (player === this.turn) {
+    var card = this[player].deck.findCardInHand(cardSlug);
+
+    switch (card.type) {
+      case 'Unit':
+        this.battlefield.addUnit(player, card);
+        break;
+      case 'Weather':
+
+        break;
+      case 'Decoy':
+
+        break;
+      case 'Scorch':
+
+        break;
+      case 'Horn':
+
+        break;
+    }
+  }
+  else {
+    throw new Error('Playing out of turn');
   }
 };
 

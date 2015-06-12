@@ -16,4 +16,8 @@ Player.prototype.readyUp = function () {
   this.ready = true;
 };
 
+Player.prototype.playCardFromHand = function (card) {
+
+};
+
 module.exports = Player;
