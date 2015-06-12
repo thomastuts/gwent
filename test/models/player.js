@@ -28,13 +28,4 @@ describe('Player creation', function () {
 
     player.lives.should.be.greaterThan(0);
   });
-
-  it('should add a deck', function () {
-    var player = new Player({
-      name: 'Geralt',
-      deck: fixtures.deck
-    });
-
-    player.should.have.property('deck');
-  });
 });
