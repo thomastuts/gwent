@@ -1,9 +1,9 @@
 var Player = require('./player');
 var Battlefield = require('./battlefield');
 
-function Board(boardId) {
+function Board(boardId, debug) {
   this.id = boardId;
-  this.startingPlayer = this.determineStartingPlayer();
+  this.startingPlayer = debug ? 'playerOne' : this.determineStartingPlayer();
   this.inProgress = false;
   this.battlefield = new Battlefield();
 }

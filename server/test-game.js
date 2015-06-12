@@ -1,7 +1,7 @@
 var Board = require('./models/board');
 var presetDeck = require('./preset-deck');
 
-var game = new Board(1);
+var game = new Board(1, true);
 
 game.setPlayerOne({
   name: 'Geralt'
