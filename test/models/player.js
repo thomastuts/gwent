@@ -20,6 +20,15 @@ describe('Player creation', function () {
     player.should.have.property('name', fixtures.player.name);
   });
 
+  it('should set the starting lives', function () {
+    var player = new Player({
+      name: fixtures.player.name,
+      deck: fixtures.deck
+    });
+
+    player.lives.should.be.greaterThan(0);
+  });
+
   it('should add a deck', function () {
     var player = new Player({
       name: 'Geralt',
