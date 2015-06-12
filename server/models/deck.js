@@ -1,4 +1,4 @@
-var shuffle = require('lodash/collection/shuffle');
+var _ = require('lodash');
 var path = require('path');
 
 var CARDS_IN_HAND = 10;
@@ -7,20 +7,35 @@ var FACTION_NAMES = [
   'monster',
   'nilfgaardian-empire',
   'northern-realms',
-  'scoiatael'
+  'scoiatael',
+  'neutral',
+  'special'
 ];
 
-var cardsByFaction = {};
+var decksByFaction = {};
 
 FACTION_NAMES.forEach(function (factionName) {
-  cardsByFaction[factionName] = require(path.join('../../data/cards', factionName + '.json'));
+  decksByFaction[factionName] = require(path.join('../../data/cards', factionName + '.json'));
 });
+
+function getCard(cardName, faction) {
+  var factionCard = _.find(decksByFaction[faction].cards, {slug: cardName});
+  var neutralCard = _.find(decksByFaction.neutral.cards, {slug: cardName});
+  var specialCard = _.find(decksByFaction.special.cards, {slug: cardName});
+
+  return factionCard || neutralCard || specialCard;
+}
 
 function Deck(deck) {
   // TODO: implement deck validation
   // TODO: add leader
+  var self = this;
+
   this.faction = deck.faction;
-  this.cards = deck.cards;
+  this.leader = deck.leader;
+  this.cards = deck.cards.map(function (card) {
+    return getCard(card, self.faction);
+  });
   this.hand = [];
 
   this.shuffleCards();
@@ -28,7 +43,7 @@ function Deck(deck) {
 }
 
 Deck.prototype.shuffleCards = function () {
-  this.cards = shuffle(this.cards);
+  this.cards = _.shuffle(this.cards);
 };
 
 Deck.prototype.drawHand = function () {
