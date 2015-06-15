@@ -56,7 +56,10 @@ Battlefield.prototype.updateRowStrengths = function () {
       var isAffectedByWeather = self.isWeatherEffectActive(affectedWeatherType);
       var row = self[player].rows[unitType];
 
-      if (!isAffectedByWeather) {
+      if (isAffectedByWeather) {
+        row.score = row.units.length;
+      }
+      else {
         if (row.units.length > 0) {
           row.score = _.chain(row.units)
             .pluck('strength')
@@ -66,9 +69,10 @@ Battlefield.prototype.updateRowStrengths = function () {
             .value();
         }
       }
-      else {
-        row.score = row.length;
-      }
+
+      // TODO: add morale boost calculation
+
+      // TODO: add tight bond calculation
 
       if (row.commanderHorn) {
         row.score = row.score * 2;

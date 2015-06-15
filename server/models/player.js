@@ -6,6 +6,7 @@ function Player(options) {
   this.name = options.name || 'Stranger';
   this.lives = STARTING_LIVES;
   this.ready = false;
+  this.passed = false;
 }
 
 Player.prototype.setDeck = function (deck) {

@@ -1,3 +1,6 @@
+var logger = require('bragi');
+
+var CONSTANTS = require('../constants');
 var Player = require('./player');
 var Battlefield = require('./battlefield');
 
@@ -32,8 +35,9 @@ Board.prototype.startGame = function () {
 };
 
 Board.prototype.playCard = function (player, cardSlug) {
-  if (player === this.turn) {
+  if (player === this.turn && !this[player].passed) {
     var card = this[player].deck.findCardInHand(cardSlug);
+    logger.log(player, 'is playing a card:', card.type, card.row, card.name);
 
     if (card) {
       switch (card.type) {
@@ -41,7 +45,7 @@ Board.prototype.playCard = function (player, cardSlug) {
           this.battlefield.addUnit(player, card);
           break;
         case 'Weather':
-          this.battlefield.addWeatherEffect(player, card.slug);
+          this.battlefield.addWeatherEffect(card.slug);
           break;
         case 'Decoy':
 
@@ -55,6 +59,15 @@ Board.prototype.playCard = function (player, cardSlug) {
       }
 
       // TODO: discard card from player hand
+    }
+
+    var nextPlayer = player === CONSTANTS.PLAYER_ONE ? CONSTANTS.PLAYER_TWO : CONSTANTS.PLAYER_ONE;
+
+    /**
+     * Move turn to next player if they have not passed yet.
+     */
+    if (!this[nextPlayer].passed) {
+      this.turn = nextPlayer;
     }
   }
   else {

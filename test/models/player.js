@@ -29,3 +29,11 @@ describe('Player creation', function () {
     player.lives.should.be.greaterThan(0);
   });
 });
+
+describe('Setting player deck', function () {
+  // TODO
+});
+
+describe('Ready up', function () {
+  // TODO
+});

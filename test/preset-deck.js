@@ -3,6 +3,7 @@ module.exports = {
   leader: 'foltest-lord-commander-of-the-north',
   cards: [
     'zoltan-chivay',
+    'biting-frost',
     'ves',
     'siegfried-of-denesle',
     'prince-stennis',
@@ -32,7 +33,6 @@ module.exports = {
     'commanders-horn',
     'commanders-horn',
     'commanders-horn',
-    'biting-frost',
     'impenetrable-fog',
     'impenetrable-fog',
     'torrential-rain',
