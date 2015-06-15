@@ -26,7 +26,9 @@ function Battlefield() {
 }
 
 Battlefield.prototype.addWeatherEffect = function (card) {
-  // TODO: implement
+  if (!_.contains(this.activeWeatherEffects, card)) {
+    this.activeWeatherEffects.push(card);
+  }
   this.updateRowStrengths();
 };
 

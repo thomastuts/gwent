@@ -35,22 +35,26 @@ Board.prototype.playCard = function (player, cardSlug) {
   if (player === this.turn) {
     var card = this[player].deck.findCardInHand(cardSlug);
 
-    switch (card.type) {
-      case 'Unit':
-        this.battlefield.addUnit(player, card);
-        break;
-      case 'Weather':
+    if (card) {
+      switch (card.type) {
+        case 'Unit':
+          this.battlefield.addUnit(player, card);
+          break;
+        case 'Weather':
+          this.battlefield.addWeatherEffect(player, card.slug);
+          break;
+        case 'Decoy':
 
-        break;
-      case 'Decoy':
+          break;
+        case 'Scorch':
 
-        break;
-      case 'Scorch':
+          break;
+        case 'Horn':
 
-        break;
-      case 'Horn':
+          break;
+      }
 
-        break;
+      // TODO: discard card from player hand
     }
   }
   else {
