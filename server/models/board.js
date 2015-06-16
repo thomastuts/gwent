@@ -40,24 +40,17 @@ Board.prototype.playCard = function (player, cardSlug) {
     logger.log(player, 'is playing a card:', card.type, card.row, card.name);
 
     if (card) {
-      switch (card.type) {
-        case 'Unit':
-          this.battlefield.addUnit(player, card);
-          break;
-        case 'Weather':
-          this.battlefield.addWeatherEffect(card.slug);
-          break;
-        case 'Decoy':
-
-          break;
-        case 'Scorch':
-
-          break;
-        case 'Horn':
-
-          break;
+      if (card.type === 'Unit') {
+        this.battlefield.addUnit(player, card);
       }
-
+      if (card.type === 'Special') {
+        switch (card.ability) {
+          case 'Weather':
+            console.log('Adding weather card');
+            this.battlefield.addWeatherEffect(card.slug);
+            break;
+        }
+      }
       // TODO: discard card from player hand
     }
 

@@ -5,44 +5,51 @@
     {
       "name": "Biting Frost",
       "slug": "biting-frost",
-      "type": "Weather",
-      "strength": "Sets the strength of all melee units to 1 for both players"
+      "type": "Special",
+      "ability": "Weather",
+      "description": "Sets the strength of all melee units to 1 for both players"
     },
     {
       "name": "Impenetrable Fog",
       "slug": "impenetrable-fog",
-      "type": "Weather",
-      "strength": "Sets the strength of all ranged units to 1 for both players"
+      "type": "Special",
+      "ability": "Weather",
+      "description": "Sets the strength of all ranged units to 1 for both players"
     },
     {
       "name": "Torrential Rain",
       "slug": "torrential-rain",
-      "type": "Weather",
-      "strength": "Sets the strength of all siege units to 1 for both players"
+      "type": "Special",
+      "ability": "Weather",
+      "description": "Sets the strength of all siege units to 1 for both players"
     },
     {
       "name": "Clear Weather",
       "slug": "clear-weather",
-      "type": "Weather",
-      "strength": "Eliminates all weather effects from the board."
+      "type": "Special",
+      "ability": "Weather",
+      "description": "Eliminates all weather effects from the board."
     },
     {
       "name": "Decoy",
       "slug": "decoy",
-      "type": "Decoy",
-      "strength": "Swap with a card on the battlefield to return it to your hand."
+      "type": "Special",
+      "ability": "Decoy",
+      "description": "Swap with a card on the battlefield to return it to your hand."
     },
     {
       "name": "Scorch",
       "slug": "scorch",
-      "type": "Scorch",
-      "strength": "Destroy all cards on the board with 7 strength or more."
+      "type": "Special",
+      "ability": "Scorch",
+      "description": "Destroy all cards on the board with 7 strength or more."
     },
     {
       "name": "Commander’s Horn",
       "slug": "commanders-horn",
-      "type": "Horn",
-      "strength": "Double the strength of a row (for that player only)."
+      "type": "Special",
+      "ability": "Horn",
+      "description": "Double the strength of a row (for that player only)."
     }
   ]
 }
