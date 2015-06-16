@@ -14,7 +14,7 @@ function Deck(deck) {
   this.faction = deck.faction;
   this.leader = deck.leader;
   this.cards = deck.cards.map(function (cardSlug) {
-    var card = cards.getCard(cardSlug, self.faction);
+    var card = cards.getCard(cardSlug);
 
     if (card.type === 'Unit') {
       card.strength = parseInt(card.strength);

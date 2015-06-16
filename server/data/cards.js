@@ -13,11 +13,20 @@ constants.FACTIONS.forEach(function (faction) {
 });
 
 module.exports = {
-  getCard: function (cardSlug, faction) {
-    var factionCard = _.find(cardsByFaction[faction].cards, {slug: cardSlug});
-    var neutralCard = _.find(cardsByFaction.neutral.cards, {slug: cardSlug});
-    var specialCard = _.find(specialCards.cards, {slug: cardSlug});
+  getCard: function (cardSlug) {
+    var factionCard;
+    var specialCard;
 
-    return factionCard || neutralCard || specialCard;
+    for (var faction in cardsByFaction) {
+      factionCard = _.find(cardsByFaction[faction].cards, {slug: cardSlug});
+
+      if (factionCard) {
+        return factionCard;
+      }
+    }
+
+    specialCard = _.find(specialCards.cards, {slug: cardSlug});
+
+    return factionCard || specialCard;
   }
 };
