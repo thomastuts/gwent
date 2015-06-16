@@ -4,6 +4,7 @@ module.exports = {
   cards: [
     'zoltan-chivay',
     'biting-frost',
+    'commanders-horn',
     'ves',
     'siegfried-of-denesle',
     'prince-stennis',
@@ -30,7 +31,6 @@ module.exports = {
 
     'decoy',
     'decoy',
-    'commanders-horn',
     'commanders-horn',
     'commanders-horn',
     'impenetrable-fog',

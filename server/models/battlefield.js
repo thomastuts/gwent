@@ -13,7 +13,7 @@ var UNIT_TYPES = [CONSTANTS.MELEE, CONSTANTS.RANGED, CONSTANTS.SIEGE];
 UNIT_TYPES.forEach(function (unitType) {
   initialBattlefieldState.rows[unitType] = {
     score: 0,
-    commanderHorn: false,
+    hornBuff: false,
     units: []
   };
 });
@@ -47,6 +47,11 @@ Battlefield.prototype.addUnit = function (player, card) {
   this.updateRowStrengths();
 };
 
+Battlefield.prototype.addHornBuff = function (player, row) {
+  this[player].rows[row].hornBuff = true;
+  this.updateRowStrengths();
+};
+
 Battlefield.prototype.updateRowStrengths = function () {
   var self = this;
 
@@ -74,7 +79,7 @@ Battlefield.prototype.updateRowStrengths = function () {
 
       // TODO: add tight bond calculation
 
-      if (row.commanderHorn) {
+      if (row.hornBuff) {
         row.score = row.score * 2;
       }
     });

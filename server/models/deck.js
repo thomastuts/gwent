@@ -45,6 +45,7 @@ function Deck(deck) {
   });
 
   this.hand = [];
+  this.discards = [];
 
   if (!isDebug) {
     this.shuffleCards();
@@ -78,10 +79,14 @@ Deck.prototype.sortHand = function () {
   this.hand.sort();
 };
 
-Deck.prototype.drawRandomCard = function () {
-  var drawnCard = this.cards.pop();
-  this.shuffleCards();
-  return drawnCard;
+Deck.prototype.discardCard = function (cardSlug) {
+  var index = _.findIndex(this.hand, {slug: cardSlug});
+  var card = this.hand[index];
+
+  if (index > -1) {
+    this.hand.splice(index, 1);
+    this.discards.push(card);
+  }
 };
 
 Deck.prototype.drawRandomCard = function () {

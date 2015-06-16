@@ -34,10 +34,10 @@ Board.prototype.startGame = function () {
   }
 };
 
-Board.prototype.playCard = function (player, cardSlug) {
+Board.prototype.playCard = function (player, cardSlug, target) {
   if (player === this.turn && !this[player].passed) {
     var card = this[player].deck.findCardInHand(cardSlug);
-    logger.log(player, 'is playing a card:', card.type, card.row, card.name);
+    logger.log(player, 'is playing a card:', card.type, card.row || '', card.name);
 
     if (card) {
       if (card.type === 'Unit') {
@@ -49,18 +49,22 @@ Board.prototype.playCard = function (player, cardSlug) {
             console.log('Adding weather card');
             this.battlefield.addWeatherEffect(card.slug);
             break;
+          case 'Horn':
+            this.battlefield.addHornBuff(player, target);
+            break;
         }
       }
-      // TODO: discard card from player hand
-    }
+      this[player].deck.discardCard(cardSlug);
+      // TODO: if no cards left, auto-pass for player
 
-    var nextPlayer = player === CONSTANTS.PLAYER_ONE ? CONSTANTS.PLAYER_TWO : CONSTANTS.PLAYER_ONE;
+      var nextPlayer = player === CONSTANTS.PLAYER_ONE ? CONSTANTS.PLAYER_TWO : CONSTANTS.PLAYER_ONE;
 
-    /**
-     * Move turn to next player if they have not passed yet.
-     */
-    if (!this[nextPlayer].passed) {
-      this.turn = nextPlayer;
+      /**
+       * Move turn to next player if they have not passed yet.
+       */
+      if (!this[nextPlayer].passed) {
+        this.turn = nextPlayer;
+      }
     }
   }
   else {
