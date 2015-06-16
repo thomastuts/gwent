@@ -1,6 +1,13 @@
+var cards = require('../server/data/cards');
+
 module.exports = {
   player: {
     name: 'Geralt'
+  },
+  cards: {
+    melee_5: cards.getCard('zoltan-chivay'),
+    ranged_3: cards.getCard('puttkammer'),
+    siege_3: cards.getCard('rotten-mangonel')
   },
   deck: {
     faction: 'northern-realms',

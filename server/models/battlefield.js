@@ -43,7 +43,6 @@ Battlefield.prototype.clearWeatherEffects = function () {
 
 Battlefield.prototype.addUnit = function (player, card) {
   this[player].rows[card.row].units.push(card);
-  console.log('Adding unit to battlefield:', player, card.row, card.name);
   this.updateRowStrengths();
 };
 
