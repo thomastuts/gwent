@@ -37,7 +37,7 @@ Battlefield.prototype.isWeatherEffectActive = function (weatherType) {
 };
 
 Battlefield.prototype.clearWeatherEffects = function () {
-  // TODO: implement
+  this.activeWeatherEffects = [];
   this.updateRowStrengths();
 };
 

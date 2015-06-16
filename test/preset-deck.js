@@ -5,6 +5,7 @@ module.exports = {
     'zoltan-chivay',
     'biting-frost',
     'commanders-horn',
+    'clear-weather',
     'ves',
     'siegfried-of-denesle',
     'prince-stennis',
@@ -35,7 +36,6 @@ module.exports = {
     'commanders-horn',
     'impenetrable-fog',
     'impenetrable-fog',
-    'torrential-rain',
-    'clear-weather'
+    'torrential-rain'
   ]
 };

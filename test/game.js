@@ -43,5 +43,9 @@ describe('Full game', function () {
     // P1 plays Commander's Horn on Melee row
     game.playCard('playerOne', 'commanders-horn', 'Melee');
     game.battlefield.playerOne.totalScore.should.equal(2);
+
+    // P2 plays Clear Weather
+    game.playCard('playerTwo', 'clear-weather');
+    game.battlefield.playerOne.totalScore.should.equal(10);
   });
 });

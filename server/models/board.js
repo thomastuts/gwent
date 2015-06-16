@@ -46,16 +46,20 @@ Board.prototype.playCard = function (player, cardSlug, target) {
       if (card.type === 'Special') {
         switch (card.ability) {
           case 'Weather':
-            console.log('Adding weather card');
-            this.battlefield.addWeatherEffect(card.slug);
+            if (card.slug === 'clear-weather') {
+              this.battlefield.clearWeatherEffects();
+            }
+            else {
+              this.battlefield.addWeatherEffect(card.slug);
+            }
             break;
           case 'Horn':
             this.battlefield.addHornBuff(player, target);
             break;
         }
       }
+
       this[player].deck.discardCard(cardSlug);
-      // TODO: if no cards left, auto-pass for player
 
       var nextPlayer = player === CONSTANTS.PLAYER_ONE ? CONSTANTS.PLAYER_TWO : CONSTANTS.PLAYER_ONE;
 
