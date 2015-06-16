@@ -21,8 +21,8 @@ UNIT_TYPES.forEach(function (unitType) {
 function Battlefield() {
   this.activeWeatherEffects = [];
 
-  this[CONSTANTS.PLAYER_ONE] = initialBattlefieldState;
-  this[CONSTANTS.PLAYER_TWO] = initialBattlefieldState;
+  this[CONSTANTS.PLAYER_ONE] = _.cloneDeep(initialBattlefieldState);
+  this[CONSTANTS.PLAYER_TWO] = _.cloneDeep(initialBattlefieldState);
 }
 
 Battlefield.prototype.addWeatherEffect = function (card) {
