@@ -1,31 +1,10 @@
 var _ = require('lodash');
-var path = require('path');
+
+var cards = require('../data/cards');
 
 var isDebug = process.env.NODE_ENV === 'debug';
 
 var CARDS_IN_HAND = 10;
-var FACTION_NAMES = [
-  'monster',
-  'nilfgaardian-empire',
-  'northern-realms',
-  'scoiatael',
-  'neutral',
-  'special'
-];
-
-var decksByFaction = {};
-
-FACTION_NAMES.forEach(function (factionName) {
-  decksByFaction[factionName] = require(path.join('../../data/cards', factionName + '.json'));
-});
-
-function getCard(cardName, faction) {
-  var factionCard = _.find(decksByFaction[faction].cards, {slug: cardName});
-  var neutralCard = _.find(decksByFaction.neutral.cards, {slug: cardName});
-  var specialCard = _.find(decksByFaction.special.cards, {slug: cardName});
-
-  return factionCard || neutralCard || specialCard;
-}
 
 function Deck(deck) {
   // TODO: implement deck validation
@@ -35,7 +14,7 @@ function Deck(deck) {
   this.faction = deck.faction;
   this.leader = deck.leader;
   this.cards = deck.cards.map(function (cardSlug) {
-    var card = getCard(cardSlug, self.faction);
+    var card = cards.getCard(cardSlug, self.faction);
 
     if (card.type === 'Unit') {
       card.strength = parseInt(card.strength);
