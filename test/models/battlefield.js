@@ -34,38 +34,49 @@ describe('Battlefield', function () {
       this.battlefield.addWeatherEffect(constants.RAIN);
     });
 
-    it('should add weather effects to the battlefield', function () {
-      this.battlefield.activeWeatherEffects.should.containEql(constants.FROST);
-      this.battlefield.activeWeatherEffects.should.containEql(constants.FOG);
-      this.battlefield.activeWeatherEffects.should.containEql(constants.RAIN);
+    describe('Adding and removing weather effects', function () {
+      it('should add weather effects to the battlefield', function () {
+        this.battlefield.activeWeatherEffects.should.containEql(constants.FROST);
+        this.battlefield.activeWeatherEffects.should.containEql(constants.FOG);
+        this.battlefield.activeWeatherEffects.should.containEql(constants.RAIN);
+      });
+
+      it('should not add weather effects more than once', function () {
+        this.battlefield.addWeatherEffect(constants.FROST);
+
+        this.battlefield.activeWeatherEffects.filter(function (effect) {
+          return effect === constants.FROST;
+        }).should.have.lengthOf(1);
+      });
+
+      it('should remove weather effects', function () {
+        this.battlefield.clearWeatherEffects();
+        this.battlefield.activeWeatherEffects.should.have.lengthOf(0);
+      });
     });
 
-    it('should not add weather effects more than once', function () {
-      this.battlefield.addWeatherEffect(constants.FROST);
+    describe('Weather affecting units', function () {
+      var tests = [
+        {
+          row: constants.MELEE,
+          unit: fixtures.cards.melee_5
+        },
+        {
+          row: constants.RANGED,
+          unit: fixtures.cards.ranged_3
+        },
+        {
+          row: constants.SIEGE,
+          unit: fixtures.cards.siege_3
+        }
+      ];
 
-      this.battlefield.activeWeatherEffects.filter(function (effect) {
-        return effect === constants.FROST;
-      }).should.have.lengthOf(1);
-    });
-
-    it('should remove weather effects', function () {
-      this.battlefield.clearWeatherEffects();
-      this.battlefield.activeWeatherEffects.should.have.lengthOf(0);
-    });
-
-    it('should modify damage outputs for units in the Melee row', function () {
-      this.battlefield.addUnit('playerOne', fixtures.cards.melee_5);
-      this.battlefield.playerOne.rows.Melee.score.should.equal(1);
-    });
-
-    it('should modify damage outputs for units in the Ranged row', function () {
-      this.battlefield.addUnit('playerOne', fixtures.cards.ranged_3);
-      this.battlefield.playerOne.rows.Ranged.score.should.equal(1);
-    });
-
-    it('should modify damage outputs for units in the Siege row', function () {
-      this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
-      this.battlefield.playerOne.rows.Siege.score.should.equal(1);
+      tests.forEach(function (test) {
+        it('should modify damage outputs for units in the ' + test.row + ' row', function () {
+          this.battlefield.addUnit('playerOne', test.unit);
+          this.battlefield.playerOne.rows[test.row].score.should.equal(1);
+        });
+      });
     });
   });
 });
