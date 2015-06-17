@@ -42,7 +42,9 @@ class Battlefield {
   }
 
   addUnit(player, card) {
-    this[player].rows[card.row].units.push(card);
+    var unit = _.cloneDeep(card);
+    unit.actualStrength = unit.strength;
+    this[player].rows[card.row].units.push(unit);
     this.updateRowStrengths();
   }
 
@@ -67,23 +69,22 @@ class Battlefield {
         let isAffectedByWeather = this.isWeatherEffectActive(affectedWeatherType);
         let row = this[player].rows[unitType];
 
-        if (isAffectedByWeather) {
-          row.score = row.units.length;
-        }
-        else {
-          if (row.units.length > 0) {
-            row.score = _.chain(row.units)
-              .pluck('strength')
-              .reduce(function (total, strength) {
-                return total + strength;
-              })
-              .value();
+        for (let unit of row.units) {
+          unit.actualStrength = isAffectedByWeather ? 1 : unit.strength;
+
+          if (row.hornBuff) {
+            unit.actualStrength = unit.actualStrength * 2;
           }
         }
 
-        if (row.hornBuff) {
-          row.score = row.score * 2;
-        }
+        var totalRowScore = _.chain(row.units)
+          .pluck('actualStrength')
+          .reduce(function (total, strength) {
+            return total + strength;
+          })
+          .value();
+
+        row.score = totalRowScore || 0;
       });
     });
 

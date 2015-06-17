@@ -1,7 +1,7 @@
 var Board = require('../server/models/board');
 var presetDeck = require('./preset-deck');
 
-describe('Full game', function () {
+describe.only('Full game', function () {
   it('should follow Gwent rules and mechanics', function () {
     var game = new Board(1);
 
