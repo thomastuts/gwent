@@ -1,5 +1,3 @@
-require('should');
-
 var fixtures = require('../fixtures');
 var constants = require('../../server/constants');
 var Battlefield = require('../../server/models/battlefield');

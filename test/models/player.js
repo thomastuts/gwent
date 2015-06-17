@@ -1,4 +1,3 @@
-require('should');
 var fixtures = require('../fixtures');
 var Player = require('../../server/models/player');
 

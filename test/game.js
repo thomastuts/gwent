@@ -1,6 +1,3 @@
-require('should');
-process.env.NODE_ENV = 'debug';
-
 var Board = require('../server/models/board');
 var presetDeck = require('./preset-deck');
 
