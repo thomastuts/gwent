@@ -1,4 +1,4 @@
-var Deck = require('./deck');
+import Deck from './deck';
 
 const STARTING_LIVES = 2;
 

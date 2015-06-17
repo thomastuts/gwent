@@ -1,9 +1,9 @@
-var logger = require('bragi');
+import logger from 'bragi';
+import constants from '../constants';
+import Player from './player';
+import Battlefield from './battlefield';
 
 const IS_DEBUG = process.env.NODE_ENV === 'debug';
-const constants = require('../constants');
-var Player = require('./player');
-var Battlefield = require('./battlefield');
 
 // TODO: implement auth on socket to avoid other player playing actions for you
 

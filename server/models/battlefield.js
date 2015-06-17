@@ -1,8 +1,9 @@
-var _ = require('lodash');
+import _ from 'lodash';
+import constants from '../constants';
 
-const constants = require('../constants');
 const PLAYERS = [constants.PLAYER_ONE, constants.PLAYER_TWO];
 const UNIT_TYPES = [constants.MELEE, constants.RANGED, constants.SIEGE];
+
 var initialBattlefieldState = {
   totalScore: 0,
   rows: {}

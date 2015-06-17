@@ -1,6 +1,5 @@
-var _ = require('lodash');
-
-var cards = require('../data/cards');
+import _ from 'lodash';
+import cards from '../data/cards';
 
 const isDebug = process.env.NODE_ENV === 'debug';
 const CARDS_IN_HAND = 10;
