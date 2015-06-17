@@ -10,18 +10,32 @@ describe('Battlefield', function () {
   describe('Adding units', function () {
     beforeEach(function () {
       this.battlefield.addUnit('playerOne', fixtures.cards.melee_5);
+      this.battlefield.addUnit('playerOne', fixtures.cards.ranged_3);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
     });
 
     it('should add a unit to their respective row', function () {
       this.battlefield.playerOne.rows.Melee.units.should.have.lengthOf(1);
+      this.battlefield.playerOne.rows.Ranged.units.should.have.lengthOf(1);
+      this.battlefield.playerOne.rows.Siege.units.should.have.lengthOf(1);
+    });
+  });
+
+  describe('Calculating combat strengths', function () {
+    beforeEach(function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_5);
+      this.battlefield.addUnit('playerOne', fixtures.cards.ranged_3);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
     });
 
     it('should update the row score when a unit is added', function () {
       this.battlefield.playerOne.rows.Melee.score.should.equal(5);
+      this.battlefield.playerOne.rows.Ranged.score.should.equal(3);
+      this.battlefield.playerOne.rows.Siege.score.should.equal(3);
     });
 
     it('should update the total score when a unit is added', function () {
-      this.battlefield.playerOne.totalScore.should.equal(5);
+      this.battlefield.playerOne.totalScore.should.equal(11);
     });
   });
 

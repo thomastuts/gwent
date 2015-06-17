@@ -51,6 +51,15 @@ class Battlefield {
     this.updateRowStrengths();
   }
 
+  /**
+   * TODO: refactor this so it loops every unit and adds `actualStrength` prop which it then sums up to get total score.
+   *
+   * Things that modify a unit's `actualStrength`:
+   *    - Morale boost ability
+   *    - Tight bond ability
+   *    - Commander's horn ability
+   *    - Active weather effect
+   */
   updateRowStrengths() {
     PLAYERS.forEach((player) => {
       UNIT_TYPES.forEach((unitType) => {
@@ -71,10 +80,6 @@ class Battlefield {
               .value();
           }
         }
-
-        // TODO: add morale boost calculation
-
-        // TODO: add tight bond calculation
 
         if (row.hornBuff) {
           row.score = row.score * 2;
