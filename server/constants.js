@@ -16,8 +16,8 @@ var FOG = 'impenetrable-fog';
 var RAIN = 'torrential-rain';
 
 module.exports = {
-  PLAYER_ONE: PLAYER_ONE,
-  PLAYER_TWO: PLAYER_TWO,
+  PLAYER_ONE,
+  PLAYER_TWO,
 
   FACTIONS: [
     FACTION_MONSTER,
@@ -27,13 +27,13 @@ module.exports = {
     FACTION_NEUTRAL
   ],
 
-  MELEE: MELEE,
-  RANGED: RANGED,
-  SIEGE: SIEGE,
+  MELEE,
+  RANGED,
+  SIEGE,
 
-  FROST: FROST,
-  FOG: FOG,
-  RAIN: RAIN,
+  FROST,
+  FOG,
+  RAIN,
 
   MELEE_AFFECTED_WEATHER: FROST,
   RANGED_AFFECTED_WEATHER: FOG,

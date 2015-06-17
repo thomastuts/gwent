@@ -2,76 +2,71 @@ var _ = require('lodash');
 
 var cards = require('../data/cards');
 
-var isDebug = process.env.NODE_ENV === 'debug';
+const isDebug = process.env.NODE_ENV === 'debug';
+const CARDS_IN_HAND = 10;
 
-var CARDS_IN_HAND = 10;
+class Deck {
+  constructor(deck) {
+    this.faction = deck.faction;
+    this.leader = deck.leader;
+    this.hand = [];
+    this.discards = [];
 
-function Deck(deck) {
-  // TODO: implement deck validation
-  // TODO: add leader
-  var self = this;
+    this.cards = deck.cards.map(function (cardSlug) {
+      var card = cards.getCard(cardSlug);
+      if (card.type === 'Unit') {
+        card.strength = parseInt(card.strength);
+      }
+      return card;
+    });
 
-  this.faction = deck.faction;
-  this.leader = deck.leader;
-  this.cards = deck.cards.map(function (cardSlug) {
-    var card = cards.getCard(cardSlug);
-
-    if (card.type === 'Unit') {
-      card.strength = parseInt(card.strength);
+    if (!isDebug) {
+      this.shuffleCards();
     }
 
-    return card;
-  });
+    this.drawHand();
+  }
 
-  this.hand = [];
-  this.discards = [];
+  shuffleCards() {
+    this.cards = _.shuffle(this.cards);
+  }
 
-  if (!isDebug) {
+  drawHand() {
+    if (isDebug) {
+      this.hand = this.cards.slice(0, CARDS_IN_HAND);
+      this.cards = this.cards.slice(CARDS_IN_HAND, this.cards.length);
+    }
+    else {
+      for (var i = 0; i < CARDS_IN_HAND; i++) {
+        this.hand.push(this.drawRandomCard());
+      }
+    }
+    this.sortHand();
+  }
+
+  findCardInHand(cardSlug) {
+    return _.find(this.hand, {slug: cardSlug});
+  }
+
+  sortHand() {
+    this.hand.sort();
+  }
+
+  discardCard(cardSlug) {
+    var index = _.findIndex(this.hand, {slug: cardSlug});
+    var card = this.hand[index];
+
+    if (index > -1) {
+      this.hand.splice(index, 1);
+      this.discards.push(card);
+    }
+  }
+
+  drawRandomCard() {
+    var drawnCard = this.cards.pop();
     this.shuffleCards();
+    return drawnCard;
   }
-
-  this.drawHand();
 }
-
-Deck.prototype.shuffleCards = function () {
-  this.cards = _.shuffle(this.cards);
-};
-
-Deck.prototype.drawHand = function () {
-  if (isDebug) {
-    this.hand = this.cards.slice(0, CARDS_IN_HAND);
-    this.cards = this.cards.slice(CARDS_IN_HAND, this.cards.length);
-  }
-  else {
-    for (var i = 0; i < CARDS_IN_HAND; i++) {
-      this.hand.push(this.drawRandomCard());
-    }
-  }
-  this.sortHand();
-};
-
-Deck.prototype.findCardInHand = function (cardSlug) {
-  return _.find(this.hand, {slug: cardSlug});
-};
-
-Deck.prototype.sortHand = function () {
-  this.hand.sort();
-};
-
-Deck.prototype.discardCard = function (cardSlug) {
-  var index = _.findIndex(this.hand, {slug: cardSlug});
-  var card = this.hand[index];
-
-  if (index > -1) {
-    this.hand.splice(index, 1);
-    this.discards.push(card);
-  }
-};
-
-Deck.prototype.drawRandomCard = function () {
-  var drawnCard = this.cards.pop();
-  this.shuffleCards();
-  return drawnCard;
-};
 
 module.exports = Deck;

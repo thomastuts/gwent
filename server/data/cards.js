@@ -3,7 +3,7 @@
 var _ = require('lodash');
 var path = require('path');
 
-var constants = require('../constants');
+const constants = require('../constants');
 
 var cardsByFaction = {};
 var specialCards = require('../../data/cards/special.json');
@@ -13,7 +13,7 @@ constants.FACTIONS.forEach(function (faction) {
 });
 
 module.exports = {
-  getCard: function (cardSlug) {
+  getCard(cardSlug) {
     var factionCard;
     var specialCard;
 

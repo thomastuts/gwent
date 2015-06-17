@@ -1,20 +1,22 @@
 var Deck = require('./deck');
 
-var STARTING_LIVES = 2;
+const STARTING_LIVES = 2;
 
-function Player(options) {
-  this.name = options.name || 'Stranger';
-  this.lives = STARTING_LIVES;
-  this.ready = false;
-  this.passed = false;
+class Player {
+  constructor(options) {
+    this.name = options.name || 'Stranger';
+    this.lives = STARTING_LIVES;
+    this.ready = false;
+    this.passed = false;
+  }
+
+  setDeck(deck) {
+    this.deck = new Deck(deck);
+  }
+
+  readyUp() {
+    this.ready = true;
+  }
 }
-
-Player.prototype.setDeck = function (deck) {
-  this.deck = new Deck(deck);
-};
-
-Player.prototype.readyUp = function () {
-  this.ready = true;
-};
 
 module.exports = Player;
