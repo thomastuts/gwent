@@ -98,4 +98,4 @@ class Battlefield {
   }
 }
 
-module.exports = Battlefield;
+export default Battlefield;

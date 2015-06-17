@@ -17,7 +17,7 @@ const FROST = 'biting-frost';
 const FOG = 'impenetrable-fog';
 const RAIN = 'torrential-rain';
 
-module.exports = {
+export default {
   DEBUG,
 
   PLAYER_ONE,

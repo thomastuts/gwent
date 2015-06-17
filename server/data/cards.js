@@ -12,21 +12,19 @@ constants.FACTIONS.forEach(function (faction) {
   cardsByFaction[faction] = require(path.join('../../data/cards', faction + '.json'));
 });
 
-module.exports = {
-  getCard(cardSlug) {
-    let factionCard;
-    let specialCard;
+export function getCard(cardSlug) {
+  let factionCard;
+  let specialCard;
 
-    for (let faction in cardsByFaction) {
-      factionCard = _.find(cardsByFaction[faction].cards, {slug: cardSlug});
+  for (let faction in cardsByFaction) {
+    factionCard = _.find(cardsByFaction[faction].cards, {slug: cardSlug});
 
-      if (factionCard) {
-        return factionCard;
-      }
+    if (factionCard) {
+      return factionCard;
     }
-
-    specialCard = _.find(specialCards.cards, {slug: cardSlug});
-
-    return factionCard || specialCard;
   }
-};
+
+  specialCard = _.find(specialCards.cards, {slug: cardSlug});
+
+  return factionCard || specialCard;
+}

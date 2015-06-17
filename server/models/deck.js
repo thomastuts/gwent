@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import constants from '../constants';
-import cards from '../data/cards';
+import { getCard } from '../data/cards';
 
 const CARDS_IN_HAND = 10;
 
@@ -12,7 +12,7 @@ class Deck {
     this.discards = [];
 
     this.cards = deck.cards.map(function (cardSlug) {
-      let card = cards.getCard(cardSlug);
+      let card = getCard(cardSlug);
       if (card.type === 'Unit') {
         card.strength = parseInt(card.strength);
       }
@@ -68,4 +68,4 @@ class Deck {
   }
 }
 
-module.exports = Deck;
+export default Deck;
