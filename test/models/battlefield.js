@@ -37,6 +37,16 @@ describe('Battlefield', function () {
     it('should update the total score when a unit is added', function () {
       this.battlefield.playerOne.totalScore.should.equal(11);
     });
+
+    it('should calculate the actual strength of a unit and add it to a separate property', function () {
+      this.battlefield.playerOne.rows.Melee.units[0].should.have.property('strength', 5);
+      this.battlefield.playerOne.rows.Melee.units[0].should.have.property('actualStrength', 5);
+
+      this.battlefield.addWeatherEffect(constants.FROST);
+
+      this.battlefield.playerOne.rows.Melee.units[0].should.have.property('strength', 5);
+      this.battlefield.playerOne.rows.Melee.units[0].should.have.property('actualStrength', 1);
+    });
   });
 
   describe('Weather effects', function () {
