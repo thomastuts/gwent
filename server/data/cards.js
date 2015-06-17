@@ -20,6 +20,9 @@ export function getCard(cardSlug) {
     factionCard = _.find(cardsByFaction[faction].cards, {slug: cardSlug});
 
     if (factionCard) {
+      if (factionCard.type === 'Unit') {
+        factionCard.strength = parseInt(factionCard.strength);
+      }
       return factionCard;
     }
   }

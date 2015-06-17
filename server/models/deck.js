@@ -12,11 +12,7 @@ class Deck {
     this.discards = [];
 
     this.cards = deck.cards.map(function (cardSlug) {
-      let card = getCard(cardSlug);
-      if (card.type === 'Unit') {
-        card.strength = parseInt(card.strength);
-      }
-      return card;
+      return getCard(cardSlug);
     });
 
     if (!constants.DEBUG) {
