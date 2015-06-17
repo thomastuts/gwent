@@ -3,14 +3,12 @@ import constants from '../constants';
 import Player from './player';
 import Battlefield from './battlefield';
 
-const IS_DEBUG = process.env.NODE_ENV === 'debug';
-
 // TODO: implement auth on socket to avoid other player playing actions for you
 
 class Board {
   constructor(boardId) {
     this.id = boardId;
-    this.turn = IS_DEBUG ? constants.PLAYER_ONE : this.determineStartingPlayer();
+    this.turn = constants.DEBUG ? constants.PLAYER_ONE : this.determineStartingPlayer();
     this.inProgress = false;
     this.battlefield = new Battlefield();
   }

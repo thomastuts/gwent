@@ -1,7 +1,7 @@
 import _ from 'lodash';
+import constants from '../constants';
 import cards from '../data/cards';
 
-const isDebug = process.env.NODE_ENV === 'debug';
 const CARDS_IN_HAND = 10;
 
 class Deck {
@@ -19,7 +19,7 @@ class Deck {
       return card;
     });
 
-    if (!isDebug) {
+    if (!constants.DEBUG) {
       this.shuffleCards();
     }
 
@@ -31,7 +31,7 @@ class Deck {
   }
 
   drawHand() {
-    if (isDebug) {
+    if (constants.DEBUG) {
       this.hand = this.cards.slice(0, CARDS_IN_HAND);
       this.cards = this.cards.slice(CARDS_IN_HAND, this.cards.length);
     }

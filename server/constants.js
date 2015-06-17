@@ -1,21 +1,25 @@
-var PLAYER_ONE = 'playerOne';
-var PLAYER_TWO = 'playerTwo';
+const DEBUG = process.env.NODE_ENV === 'debug';
 
-var FACTION_MONSTER = 'monster';
-var FACTION_NILFGAARD = 'nilfgaardian-empire';
-var FACTION_NORTH = 'northern-realms';
-var FACTION_ELVES = 'scoiatael';
-var FACTION_NEUTRAL = 'neutral';
+const PLAYER_ONE = 'playerOne';
+const PLAYER_TWO = 'playerTwo';
 
-var MELEE = 'Melee';
-var RANGED = 'Ranged';
-var SIEGE = 'Siege';
+const FACTION_MONSTER = 'monster';
+const FACTION_NILFGAARD = 'nilfgaardian-empire';
+const FACTION_NORTH = 'northern-realms';
+const FACTION_ELVES = 'scoiatael';
+const FACTION_NEUTRAL = 'neutral';
 
-var FROST = 'biting-frost';
-var FOG = 'impenetrable-fog';
-var RAIN = 'torrential-rain';
+const MELEE = 'Melee';
+const RANGED = 'Ranged';
+const SIEGE = 'Siege';
+
+const FROST = 'biting-frost';
+const FOG = 'impenetrable-fog';
+const RAIN = 'torrential-rain';
 
 module.exports = {
+  DEBUG,
+
   PLAYER_ONE,
   PLAYER_TWO,
 
