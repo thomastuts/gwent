@@ -63,7 +63,7 @@ class Battlefield {
   updateRowStrengths() {
     PLAYERS.forEach((player) => {
       UNIT_TYPES.forEach((unitType) => {
-        let affectedWeatherType = constants[unitType.toUpperCase() + '_AFFECTED_WEATHER'];
+        let affectedWeatherType = constants.WEATHER_INFLUENCE[unitType.toUpperCase()];
         let isAffectedByWeather = this.isWeatherEffectActive(affectedWeatherType);
         let row = this[player].rows[unitType];
 
