@@ -34,7 +34,7 @@ class Board {
 
   playCard(player, cardSlug, target) {
     if (player === this.turn && !this[player].passed) {
-      var card = this[player].deck.findCardInHand(cardSlug);
+      let card = this[player].deck.findCardInHand(cardSlug);
       logger.log(player, 'is playing a card:', card.type, card.row || '', card.name);
 
       if (card) {
@@ -59,7 +59,7 @@ class Board {
 
         this[player].deck.discardCard(cardSlug);
 
-        var nextPlayer = player === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
+        let nextPlayer = player === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
 
         /**
          * Move turn to next player if they have not passed yet.
@@ -76,8 +76,8 @@ class Board {
 
   canGameStart() {
     if (this.playerOne && this.playerTwo) {
-      var playerOneReady = this.playerOne.ready && this.playerOne.deck !== undefined;
-      var playerTwoReady = this.playerTwo.ready && this.playerTwo.deck !== undefined;
+      let playerOneReady = this.playerOne.ready && this.playerOne.deck !== undefined;
+      let playerTwoReady = this.playerTwo.ready && this.playerTwo.deck !== undefined;
       return playerOneReady && playerTwoReady;
     }
 
@@ -85,7 +85,7 @@ class Board {
   }
 
   determineStartingPlayer() {
-    var random = Math.round(Math.random() * 100);
+    let random = Math.round(Math.random() * 100);
     return random > 50 ? 'playerOne' : 'playerTwo';
   }
 }

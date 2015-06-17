@@ -1,12 +1,12 @@
 'use strict';
 
-var _ = require('lodash');
-var path = require('path');
+let _ = require('lodash');
+let path = require('path');
 
 const constants = require('../constants');
 
-var cardsByFaction = {};
-var specialCards = require('../../data/cards/special.json');
+let cardsByFaction = {};
+let specialCards = require('../../data/cards/special.json');
 
 constants.FACTIONS.forEach(function (faction) {
   cardsByFaction[faction] = require(path.join('../../data/cards', faction + '.json'));
@@ -14,10 +14,10 @@ constants.FACTIONS.forEach(function (faction) {
 
 module.exports = {
   getCard(cardSlug) {
-    var factionCard;
-    var specialCard;
+    let factionCard;
+    let specialCard;
 
-    for (var faction in cardsByFaction) {
+    for (let faction in cardsByFaction) {
       factionCard = _.find(cardsByFaction[faction].cards, {slug: cardSlug});
 
       if (factionCard) {

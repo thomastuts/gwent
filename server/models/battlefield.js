@@ -4,7 +4,7 @@ import constants from '../constants';
 const PLAYERS = [constants.PLAYER_ONE, constants.PLAYER_TWO];
 const UNIT_TYPES = [constants.MELEE, constants.RANGED, constants.SIEGE];
 
-var initialBattlefieldState = {
+let initialBattlefieldState = {
   totalScore: 0,
   rows: {}
 };
@@ -54,9 +54,9 @@ class Battlefield {
   updateRowStrengths() {
     PLAYERS.forEach((player) => {
       UNIT_TYPES.forEach((unitType) => {
-        var affectedWeatherType = constants[unitType.toUpperCase() + '_AFFECTED_WEATHER'];
-        var isAffectedByWeather = this.isWeatherEffectActive(affectedWeatherType);
-        var row = this[player].rows[unitType];
+        let affectedWeatherType = constants[unitType.toUpperCase() + '_AFFECTED_WEATHER'];
+        let isAffectedByWeather = this.isWeatherEffectActive(affectedWeatherType);
+        let row = this[player].rows[unitType];
 
         if (isAffectedByWeather) {
           row.score = row.units.length;
@@ -87,9 +87,9 @@ class Battlefield {
 
   updateTotalScores() {
     PLAYERS.forEach((player) => {
-      var totalScore = 0;
+      let totalScore = 0;
 
-      for (var unitType in this[player].rows) {
+      for (let unitType in this[player].rows) {
         totalScore += this[player].rows[unitType].score;
       }
 

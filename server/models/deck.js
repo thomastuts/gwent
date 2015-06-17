@@ -12,7 +12,7 @@ class Deck {
     this.discards = [];
 
     this.cards = deck.cards.map(function (cardSlug) {
-      var card = cards.getCard(cardSlug);
+      let card = cards.getCard(cardSlug);
       if (card.type === 'Unit') {
         card.strength = parseInt(card.strength);
       }
@@ -36,7 +36,7 @@ class Deck {
       this.cards = this.cards.slice(CARDS_IN_HAND, this.cards.length);
     }
     else {
-      for (var i = 0; i < CARDS_IN_HAND; i++) {
+      for (let i = 0; i < CARDS_IN_HAND; i++) {
         this.hand.push(this.drawRandomCard());
       }
     }
@@ -52,8 +52,8 @@ class Deck {
   }
 
   discardCard(cardSlug) {
-    var index = _.findIndex(this.hand, {slug: cardSlug});
-    var card = this.hand[index];
+    let index = _.findIndex(this.hand, {slug: cardSlug});
+    let card = this.hand[index];
 
     if (index > -1) {
       this.hand.splice(index, 1);
@@ -62,7 +62,7 @@ class Deck {
   }
 
   drawRandomCard() {
-    var drawnCard = this.cards.pop();
+    let drawnCard = this.cards.pop();
     this.shuffleCards();
     return drawnCard;
   }
