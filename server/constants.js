@@ -13,6 +13,13 @@ const MELEE = 'Melee';
 const RANGED = 'Ranged';
 const SIEGE = 'Siege';
 
+const ABILITY_MORALE = 'Morale Boost';
+const ABILITY_HORN = 'Horn';
+const ABILITY_WEATHER = 'Weather';
+
+const CARD_TYPE_UNIT = 'Unit';
+const CARD_TYPE_SPECIAL = 'Special';
+
 const FROST = 'biting-frost';
 const FOG = 'impenetrable-fog';
 const RAIN = 'torrential-rain';
@@ -43,5 +50,12 @@ export default {
     MELEE: FROST,
     RANGED: FOG,
     SIEGE: RAIN
-  }
+  },
+
+  ABILITY_MORALE,
+  ABILITY_HORN,
+  ABILITY_WEATHER,
+
+  CARD_TYPE_UNIT,
+  CARD_TYPE_SPECIAL
 };

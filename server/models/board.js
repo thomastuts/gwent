@@ -38,12 +38,12 @@ class Board {
       logger.log(player, 'is playing a card:', card.type, card.row || '', card.name);
 
       if (card) {
-        if (card.type === 'Unit') {
+        if (card.type === constants.CARD_TYPE_UNIT) {
           this.battlefield.addUnit(player, card);
         }
-        if (card.type === 'Special') {
+        if (card.type === constants.CARD_TYPE_SPECIAL) {
           switch (card.ability) {
-            case 'Weather':
+            case constants.ABILITY_WEATHER:
               if (card.slug === 'clear-weather') {
                 this.battlefield.clearWeatherEffects();
               }
@@ -51,7 +51,7 @@ class Board {
                 this.battlefield.addWeatherEffect(card.slug);
               }
               break;
-            case 'Horn':
+            case constants.ABILITY_HORN:
               this.battlefield.addHornBuff(player, target);
               break;
           }
@@ -86,7 +86,7 @@ class Board {
 
   determineStartingPlayer() {
     let random = Math.round(Math.random() * 100);
-    return random > 50 ? 'playerOne' : 'playerTwo';
+    return random > 50 ? constants.PLAYER_ONE : constants.PLAYER_TWO;
   }
 }
 
