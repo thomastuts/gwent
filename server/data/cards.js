@@ -1,7 +1,7 @@
 'use strict';
 
-let _ = require('lodash');
-let path = require('path');
+import _ from 'lodash';
+import path from 'path';
 
 const constants = require('../constants');
 
