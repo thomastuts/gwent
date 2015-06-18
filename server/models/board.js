@@ -36,9 +36,13 @@ class Board {
   playCard(player, cardSlug, target) {
     if (player === this.turn && !this[player].passed) {
       let card = this[player].deck.findCardInHand(cardSlug);
-      logger.log(player, 'is playing a card:', card.type, card.row || '', card.name);
 
-      if (card) {
+      if (!card) {
+        throw new Error('Player does not have this card');
+      }
+      else {
+        logger.log(player, 'is playing a card:', card.type, card.row || '', card.name);
+
         if (card.type === constants.CARD_TYPE_UNIT) {
           this.battlefield.addUnit(player, card);
         }
@@ -120,7 +124,8 @@ class Board {
   }
 
   resetBoardForNextRound() {
-
+    // Reset battlefield
+    // Move all cards in playing field to player's discards
   }
 
   endGame(outcome) {
