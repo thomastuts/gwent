@@ -48,7 +48,7 @@ class Board {
                 this.battlefield.clearWeatherEffects();
               }
               else {
-                this.battlefield.addWeatherEffect(card.slug);
+                this.battlefield.addWeatherEffect(card);
               }
               break;
             case constants.ABILITY_HORN:

@@ -26,8 +26,8 @@ class Battlefield {
   }
 
   addWeatherEffect(card) {
-    if (!_.contains(this.activeWeatherEffects, card)) {
-      this.activeWeatherEffects.push(card);
+    if (!_.contains(this.activeWeatherEffects, card.slug)) {
+      this.activeWeatherEffects.push(card.slug);
     }
     this.updateRowStrengths();
   }

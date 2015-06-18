@@ -42,7 +42,7 @@ describe('Battlefield', function () {
       this.battlefield.playerOne.rows.Melee.units[0].should.have.property('strength', 5);
       this.battlefield.playerOne.rows.Melee.units[0].should.have.property('actualStrength', 5);
 
-      this.battlefield.addWeatherEffect(constants.FROST);
+      this.battlefield.addWeatherEffect(fixtures.cards.weather_frost);
 
       this.battlefield.playerOne.rows.Melee.units[0].should.have.property('strength', 5);
       this.battlefield.playerOne.rows.Melee.units[0].should.have.property('actualStrength', 1);
@@ -51,23 +51,23 @@ describe('Battlefield', function () {
 
   describe('Weather effects', function () {
     beforeEach(function () {
-      this.battlefield.addWeatherEffect(constants.FROST);
-      this.battlefield.addWeatherEffect(constants.FOG);
-      this.battlefield.addWeatherEffect(constants.RAIN);
+      this.battlefield.addWeatherEffect(fixtures.cards.weather_frost);
+      this.battlefield.addWeatherEffect(fixtures.cards.weather_fog);
+      this.battlefield.addWeatherEffect(fixtures.cards.weather_rain);
     });
 
     describe('Adding and removing weather effects', function () {
       it('should add weather effects to the battlefield', function () {
-        this.battlefield.activeWeatherEffects.should.containEql(constants.FROST);
-        this.battlefield.activeWeatherEffects.should.containEql(constants.FOG);
-        this.battlefield.activeWeatherEffects.should.containEql(constants.RAIN);
+        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_frost.slug);
+        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_fog.slug);
+        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_rain.slug);
       });
 
       it('should not add weather effects more than once', function () {
-        this.battlefield.addWeatherEffect(constants.FROST);
+        this.battlefield.addWeatherEffect(fixtures.cards.weather_frost);
 
         this.battlefield.activeWeatherEffects.filter(function (effect) {
-          return effect === constants.FROST;
+          return effect === fixtures.cards.weather_frost.slug;
         }).should.have.lengthOf(1);
       });
 
@@ -120,7 +120,7 @@ describe('Battlefield', function () {
       this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
       this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
       this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
-      this.battlefield.addWeatherEffect(constants.RAIN);
+      this.battlefield.addWeatherEffect(fixtures.cards.weather_rain);
       this.battlefield.playerOne.rows.Siege.score.should.equal(7); // (1 + 2) + (1 + 1) + (1 + 1)
     });
 
@@ -158,7 +158,7 @@ describe('Battlefield', function () {
       this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
       this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
       this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
-      this.battlefield.addWeatherEffect(constants.FROST);
+      this.battlefield.addWeatherEffect(fixtures.cards.weather_frost);
       this.battlefield.playerOne.rows.Melee.score.should.equal(9);
     });
   });
