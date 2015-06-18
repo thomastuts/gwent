@@ -54,8 +54,6 @@ class Battlefield {
   }
 
   /**
-   * TODO: refactor this so it loops every unit and adds `actualStrength` prop which it then sums up to get total score.
-   *
    * Things that modify a unit's `actualStrength`:
    *    - Morale boost ability
    *    - Tight bond ability
