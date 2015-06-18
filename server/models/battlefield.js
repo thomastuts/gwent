@@ -65,12 +65,23 @@ class Battlefield {
   updateRowStrengths() {
     PLAYERS.forEach((player) => {
       UNIT_TYPES.forEach((unitType) => {
+        let row = this[player].rows[unitType];
         let affectedWeatherType = constants.WEATHER_INFLUENCE[unitType.toUpperCase()];
         let isAffectedByWeather = this.isWeatherEffectActive(affectedWeatherType);
-        let row = this[player].rows[unitType];
+        let amountOfMoraleBoosts = row.units.filter((unit) => { return unit.ability === constants.ABILITY_MORALE }).length;
 
         for (let unit of row.units) {
           unit.actualStrength = isAffectedByWeather ? 1 : unit.strength;
+
+          if (amountOfMoraleBoosts) {
+            let strengthToAdd = amountOfMoraleBoosts;
+
+            if (unit.ability === constants.ABILITY_MORALE) {
+              strengthToAdd = amountOfMoraleBoosts - 1;
+            }
+
+            unit.actualStrength += strengthToAdd;
+          }
 
           if (row.hornBuff) {
             unit.actualStrength = unit.actualStrength * 2;

@@ -101,4 +101,19 @@ describe('Battlefield', function () {
       });
     });
   });
+
+  describe('Morale boost', function () {
+    it('should apply the Morale Boost to all units except the unit itself', function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
+      this.battlefield.playerOne.rows.Siege.score.should.equal(5); // (3 + 1) + 1 from morale boost
+    });
+
+    it('should stack multiple Morale Boost abilities', function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
+      this.battlefield.playerOne.rows.Siege.score.should.equal(9); // (3 + 2) + (1 + 1) + (1 + 1) from morale boost
+    });
+  });
 });

@@ -5,9 +5,11 @@ module.exports = {
     name: 'Geralt'
   },
   cards: {
+    ability_rain: cards.getCard('torrential-rain'),
     melee_5: cards.getCard('zoltan-chivay'),
     ranged_3: cards.getCard('puttkammer'),
-    siege_3: cards.getCard('rotten-mangonel')
+    siege_3: cards.getCard('rotten-mangonel'),
+    siege_1_morale_boost: cards.getCard('kaedweni-siege-expert')
   },
   deck: {
     faction: 'northern-realms',
