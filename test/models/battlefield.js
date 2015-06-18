@@ -102,18 +102,34 @@ describe('Battlefield', function () {
     });
   });
 
-  describe('Morale boost', function () {
+  describe('Morale Boost', function () {
     it('should apply the Morale Boost to all units except the unit itself', function () {
       this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
       this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
-      this.battlefield.playerOne.rows.Siege.score.should.equal(5); // (3 + 1) + 1 from morale boost
+      this.battlefield.playerOne.rows.Siege.score.should.equal(5); // (3 + 1) + 1
     });
 
     it('should stack multiple Morale Boost abilities', function () {
       this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
       this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
       this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
-      this.battlefield.playerOne.rows.Siege.score.should.equal(9); // (3 + 2) + (1 + 1) + (1 + 1) from morale boost
+      this.battlefield.playerOne.rows.Siege.score.should.equal(9); // (3 + 2) + (1 + 1) + (1 + 1)
+    });
+
+    it('should work through weather effects', function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
+      this.battlefield.addWeatherEffect(constants.RAIN);
+      this.battlefield.playerOne.rows.Siege.score.should.equal(7); // (1 + 2) + (1 + 1) + (1 + 1)
+    });
+
+    it('should work in conjunction with Horn ability', function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_3);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
+      this.battlefield.addUnit('playerOne', fixtures.cards.siege_1_morale_boost);
+      this.battlefield.addHornBuff('playerOne', 'Siege');
+      this.battlefield.playerOne.rows.Siege.score.should.equal(18); // ((3 + 2) + (1 + 1) + (1 + 1)) * 2
     });
   });
 });
