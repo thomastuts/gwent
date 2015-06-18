@@ -14,6 +14,7 @@ const RANGED = 'Ranged';
 const SIEGE = 'Siege';
 
 const ABILITY_MORALE = 'Morale Boost';
+const ABILITY_TIGHT_BOND = 'Tight Bond';
 const ABILITY_HORN = 'Horn';
 const ABILITY_WEATHER = 'Weather';
 
@@ -53,6 +54,7 @@ export default {
   },
 
   ABILITY_MORALE,
+  ABILITY_TIGHT_BOND,
   ABILITY_HORN,
   ABILITY_WEATHER,
 

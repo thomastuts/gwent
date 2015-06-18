@@ -132,4 +132,34 @@ describe('Battlefield', function () {
       this.battlefield.playerOne.rows.Siege.score.should.equal(18); // ((3 + 2) + (1 + 1) + (1 + 1)) * 2
     });
   });
+
+  describe('Tight Bond', function () {
+    it('should correctly update strength for the same units with Tight Bond', function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.playerOne.rows.Melee.score.should.equal(16);
+    });
+
+    it('should additively add the Tight Bond bonus to units', function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.playerOne.rows.Melee.score.should.equal(36);
+    });
+
+    it('should work in conjunction with Horn buff', function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.addHornBuff('playerOne', 'Melee');
+      this.battlefield.playerOne.rows.Melee.score.should.equal(32);
+    });
+
+    it('should work through weather effects', function () {
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.addUnit('playerOne', fixtures.cards.melee_4_tight_bond);
+      this.battlefield.addWeatherEffect(constants.FROST);
+      this.battlefield.playerOne.rows.Melee.score.should.equal(9);
+    });
+  });
 });

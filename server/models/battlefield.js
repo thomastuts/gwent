@@ -68,10 +68,20 @@ class Battlefield {
         let row = this[player].rows[unitType];
         let affectedWeatherType = constants.WEATHER_INFLUENCE[unitType.toUpperCase()];
         let isAffectedByWeather = this.isWeatherEffectActive(affectedWeatherType);
-        let amountOfMoraleBoosts = row.units.filter((unit) => { return unit.ability === constants.ABILITY_MORALE }).length;
+        let amountOfMoraleBoosts = row.units.filter((unit) => {
+          return unit.ability === constants.ABILITY_MORALE
+        }).length;
 
         for (let unit of row.units) {
           unit.actualStrength = isAffectedByWeather ? 1 : unit.strength;
+
+          let amountOfTightBondUnits = row.units.filter((unitToFilter) => {
+            return unitToFilter.ability === constants.ABILITY_TIGHT_BOND && unitToFilter.slug === unit.slug
+          }).length;
+
+          if (amountOfTightBondUnits > 1) {
+            unit.actualStrength = unit.actualStrength * amountOfTightBondUnits;
+          }
 
           if (amountOfMoraleBoosts) {
             let strengthToAdd = amountOfMoraleBoosts;

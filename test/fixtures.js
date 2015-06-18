@@ -6,6 +6,7 @@ module.exports = {
   },
   cards: {
     melee_5: cards.getCard('zoltan-chivay'),
+    melee_4_tight_bond: cards.getCard('blue-stripes-commando'),
     ranged_3: cards.getCard('puttkammer'),
     siege_3: cards.getCard('rotten-mangonel'),
     siege_1_morale_boost: cards.getCard('kaedweni-siege-expert')
