@@ -1,4 +1,5 @@
 var cards = require('../server/data/cards');
+var presetDeck = require('./preset-deck');
 var constants = require('../server/constants');
 
 module.exports = {
@@ -15,44 +16,5 @@ module.exports = {
     weather_fog: cards.getCard(constants.FOG),
     weather_rain: cards.getCard(constants.RAIN)
   },
-  deck: {
-    faction: 'northern-realms',
-    leader: 'foltest-lord-commander-of-the-north',
-    cards: [
-      'zoltan-chivay',
-      'biting-frost',
-      'ves',
-      'siegfried-of-denesle',
-      'prince-stennis',
-      'blue-stripes-commando',
-      'blue-stripes-commando',
-      'blue-stripes-commando',
-
-      'dethmold',
-      'keira-metz',
-      'sile-de-tansarville',
-      'crinfrid-reavers-dragon-hunter',
-      'crinfrid-reavers-dragon-hunter',
-      'sabrina-gevissig',
-      'sheldon-skaggs',
-
-      'catapult',
-      'trebuchet',
-      'trebuchet',
-      'ballista',
-      'dun-banner-medic',
-      'kaedweni-siege-expert',
-      'kaedweni-siege-expert',
-      'kaedweni-siege-expert',
-
-      'decoy',
-      'decoy',
-      'commanders-horn',
-      'commanders-horn',
-      'commanders-horn',
-      'impenetrable-fog',
-      'impenetrable-fog',
-      'torrential-rain',
-      'clear-weather'
-    ]
-  }};
+  deck: presetDeck
+};
