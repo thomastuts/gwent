@@ -44,5 +44,12 @@ describe('Full game', function () {
     // P2 plays Clear Weather
     game.playCard('playerTwo', 'clear-weather');
     game.battlefield.playerOne.totalScore.should.equal(10);
+
+    game.playerOne.passTurn();
+    game.playerTwo.passTurn();
+
+    game.endRound();
+
+    game.playerTwo.lives.should.equal(1);
   });
 });

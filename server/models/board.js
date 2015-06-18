@@ -8,6 +8,7 @@ import Battlefield from './battlefield';
 class Board {
   constructor(boardId) {
     this.id = boardId;
+    this.round = 1;
     this.turn = constants.DEBUG ? constants.PLAYER_ONE : this.determineStartingPlayer();
     this.inProgress = false;
     this.battlefield = new Battlefield();
@@ -82,6 +83,53 @@ class Board {
     }
 
     return false;
+  }
+
+  endRound() {
+    if (this.playerOne.passed && this.playerTwo.passed) {
+      let outcome = this.battlefield.getWinner();
+
+      if (outcome === constants.OUTCOME_TIE && this.round === 2) {
+        this.endGameInTie();
+      }
+      else if (outcome === constants.OUTCOME_TIE) {
+        this.playerOne.lives--;
+        this.playerTwo.lives--;
+      }
+      else {
+        var loser = outcome === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
+        this[loser].lives--;
+      }
+
+      if (this.playerOne.lives === 0 || this.playerTwo.lives === 0) {
+        let isTie = this.playerOne.lives === 0 && this.playerTwo.lives === 0;
+        if (isTie) {
+          endGame(constants.OUTCOME_TIE);
+        }
+        else {
+          endGame(outcome);
+        }
+      }
+      else {
+        this.round++;
+        this.resetBoardForNextRound();
+      }
+
+      console.log('Score:', this.playerOne.lives, this.playerTwo.lives);
+    }
+  }
+
+  resetBoardForNextRound() {
+
+  }
+
+  endGame(outcome) {
+    if (outcome === constants.OUTCOME_TIE) {
+
+    }
+    else {
+      console.log('The game has ended, ' + outcome + ' is the winner!');
+    }
   }
 
   determineStartingPlayer() {

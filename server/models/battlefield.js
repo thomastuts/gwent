@@ -41,6 +41,15 @@ class Battlefield {
     this.updateRowStrengths();
   }
 
+  getWinner() {
+    if (this.playerOne.totalScore === this.playerTwo.totalScore) {
+      return constants.OUTCOME_TIE;
+    }
+    else {
+      return this.playerOne.totalScore > this.playerTwo.totalScore ? constants.PLAYER_ONE : constants.PLAYER_TWO;
+    }
+  }
+
   addUnit(player, card) {
     var unit = _.cloneDeep(card);
     unit.actualStrength = unit.strength;

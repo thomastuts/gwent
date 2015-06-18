@@ -3,6 +3,8 @@ const DEBUG = process.env.NODE_ENV === 'debug';
 const PLAYER_ONE = 'playerOne';
 const PLAYER_TWO = 'playerTwo';
 
+const OUTCOME_TIE = 'tie';
+
 const FACTION_MONSTER = 'monster';
 const FACTION_NILFGAARD = 'nilfgaardian-empire';
 const FACTION_NORTH = 'northern-realms';

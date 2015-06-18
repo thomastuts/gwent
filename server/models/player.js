@@ -17,6 +17,10 @@ class Player {
   readyUp() {
     this.ready = true;
   }
+
+  passTurn() {
+    this.passed = true;
+  }
 }
 
 export default Player;
