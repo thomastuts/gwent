@@ -58,16 +58,16 @@ describe('Battlefield', function () {
 
     describe('Adding and removing weather effects', function () {
       it('should add weather effects to the battlefield', function () {
-        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_frost.slug);
-        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_fog.slug);
-        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_rain.slug);
+        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_frost);
+        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_fog);
+        this.battlefield.activeWeatherEffects.should.containEql(fixtures.cards.weather_rain);
       });
 
       it('should not add weather effects more than once', function () {
         this.battlefield.addWeatherEffect(fixtures.cards.weather_frost);
 
-        this.battlefield.activeWeatherEffects.filter(function (effect) {
-          return effect === fixtures.cards.weather_frost.slug;
+        this.battlefield.activeWeatherEffects.filter(function (card) {
+          return card.slug === fixtures.cards.weather_frost.slug;
         }).should.have.lengthOf(1);
       });
 

@@ -26,14 +26,14 @@ class Battlefield {
   }
 
   addWeatherEffect(card) {
-    if (!_.contains(this.activeWeatherEffects, card.slug)) {
-      this.activeWeatherEffects.push(card.slug);
+    if (!this.isWeatherEffectActive(card.slug)) {
+      this.activeWeatherEffects.push(card);
     }
     this.updateRowStrengths();
   }
 
   isWeatherEffectActive(weatherType) {
-    return this.activeWeatherEffects.indexOf(weatherType) > -1;
+    return _.find(this.activeWeatherEffects, { slug: weatherType });
   }
 
   clearWeatherEffects() {
