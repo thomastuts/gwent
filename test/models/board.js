@@ -1,3 +1,6 @@
+var sinon = require('sinon');
+
+var events = require('../../server/events');
 var fixtures = require('../fixtures');
 var Board = require('../../server/models/board');
 
@@ -41,6 +44,34 @@ describe('Board', function () {
       (function () {
         board.playCard('playerOne', fixtures.cards.melee_5.slug);
       }).should.throw('Player does not have this card');
+    });
+  });
+
+  describe('Events', function () {
+    it('should emit a round end event when the round is over', function () {
+      var spy = sinon.spy();
+      this.board.on(events.ROUND_END, spy);
+
+      this.board.playCard('playerOne', fixtures.cards.melee_5.slug);
+      this.board.pass('playerOne');
+      this.board.pass('playerTwo');
+
+      spy.called.should.equal(true);
+    });
+
+    it('should emit a round end event when the game is over', function () {
+      var spy = sinon.spy();
+      this.board.on(events.GAME_END, spy);
+
+      this.board.playCard('playerOne', fixtures.cards.melee_5.slug);
+      this.board.pass('playerOne');
+      this.board.pass('playerTwo');
+
+      this.board.playCard('playerOne', fixtures.cards.melee_5.slug);
+      this.board.pass('playerOne');
+      this.board.pass('playerTwo');
+
+      spy.called.should.equal(true);
     });
   });
 });

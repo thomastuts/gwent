@@ -1,12 +1,17 @@
 import logger from 'bragi';
+import EventEmitter from 'events';
+
 import constants from '../constants';
+import events from '../events';
 import Player from './player';
 import Battlefield from './battlefield';
 
 // TODO: implement auth on socket to avoid other player playing actions for you
 
-class Board {
+class Board extends EventEmitter {
   constructor(boardId) {
+    super();
+
     this.id = boardId;
     this.round = 1;
     this.turn = constants.DEBUG ? constants.PLAYER_ONE : this.determineStartingPlayer();
@@ -20,6 +25,22 @@ class Board {
 
   setPlayerTwo(player) {
     this.playerTwo = new Player(player);
+  }
+
+  pass(player) {
+    this[player].passTurn();
+
+    let nextPlayer = player === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
+
+    /**
+     * Move turn to next player if they have not passed yet. Otherwise, emit the round event event.
+     */
+    if (!this[nextPlayer].passed) {
+      this.turn = nextPlayer;
+    }
+    else {
+      this.endRound();
+    }
   }
 
   startGame() {
@@ -115,6 +136,7 @@ class Board {
         }
       }
       else {
+        this.emit(events.ROUND_END);
         this.round++;
         this.resetBoardForNextRound();
       }
@@ -129,12 +151,7 @@ class Board {
   }
 
   endGame(outcome) {
-    if (outcome === constants.OUTCOME_TIE) {
-
-    }
-    else {
-      console.log('The game has ended, ' + outcome + ' is the winner!');
-    }
+    this.emit(events.GAME_END, outcome);
   }
 
   determineStartingPlayer() {
