@@ -6,7 +6,7 @@ module.exports = {
     'biting-frost',
     'commanders-horn',
     'clear-weather',
-    'ves',
+    'kaedweni-siege-expert',
     'siegfried-of-denesle',
     'prince-stennis',
     'blue-stripes-commando',
@@ -26,7 +26,6 @@ module.exports = {
     'trebuchet',
     'ballista',
     'dun-banner-medic',
-    'kaedweni-siege-expert',
     'kaedweni-siege-expert',
     'kaedweni-siege-expert',
 

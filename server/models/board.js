@@ -28,18 +28,23 @@ class Board extends EventEmitter {
   }
 
   pass(player) {
-    this[player].passTurn();
+    if (this.turn === player) {
+      this[player].passTurn();
 
-    let nextPlayer = player === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
+      let nextPlayer = player === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
 
-    /**
-     * Move turn to next player if they have not passed yet. Otherwise, emit the round event event.
-     */
-    if (!this[nextPlayer].passed) {
-      this.turn = nextPlayer;
+      /**
+       * Move turn to next player if they have not passed yet. Otherwise, end the round.
+       */
+      if (!this[nextPlayer].passed) {
+        this.turn = nextPlayer;
+      }
+      else {
+        this.endRound();
+      }
     }
     else {
-      this.endRound();
+      throw new Error('Playing out of turn');
     }
   }
 

@@ -53,10 +53,26 @@ describe('Board', function () {
       this.board.on(events.ROUND_END, spy);
 
       this.board.playCard('playerOne', fixtures.cards.melee_5.slug);
-      this.board.pass('playerOne');
       this.board.pass('playerTwo');
+      this.board.pass('playerOne');
 
       spy.called.should.equal(true);
+    });
+
+    it('should set the turn to the winner of the round in preparation for the next round', function () {
+      this.board.playCard('playerOne', fixtures.cards.melee_5.slug);
+      this.board.pass('playerTwo');
+      this.board.pass('playerOne');
+
+      this.board.turn.should.equal('playerOne');
+    });
+
+    it('should set the turn to the next player in preparation for the next round in case of an outcome', function () {
+      this.board.playCard('playerOne', fixtures.cards.siege_1_morale_boost.slug);
+      this.board.pass('playerTwo');
+      this.board.pass('playerOne');
+
+      this.board.turn.should.equal('playerOne');
     });
   });
 
@@ -66,12 +82,12 @@ describe('Board', function () {
       this.board.on(events.GAME_END, spy);
 
       this.board.playCard('playerOne', fixtures.cards.melee_5.slug);
-      this.board.pass('playerOne');
       this.board.pass('playerTwo');
+      this.board.pass('playerOne');
 
       this.board.playCard('playerOne', fixtures.cards.melee_4_tight_bond.slug);
-      this.board.pass('playerOne');
       this.board.pass('playerTwo');
+      this.board.pass('playerOne');
 
       spy.called.should.equal(true);
     });
