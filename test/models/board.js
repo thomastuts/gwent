@@ -47,8 +47,8 @@ describe('Board', function () {
     });
   });
 
-  describe('Events', function () {
-    it('should emit a round end event when the round is over', function () {
+  describe('Round end', function () {
+    it('should emit an event when the round is over', function () {
       var spy = sinon.spy();
       this.board.on(events.ROUND_END, spy);
 
@@ -58,8 +58,10 @@ describe('Board', function () {
 
       spy.called.should.equal(true);
     });
+  });
 
-    it('should emit a round end event when the game is over', function () {
+  describe('Game end', function () {
+    it('should emit an event when the game is over', function () {
       var spy = sinon.spy();
       this.board.on(events.GAME_END, spy);
 
@@ -67,7 +69,7 @@ describe('Board', function () {
       this.board.pass('playerOne');
       this.board.pass('playerTwo');
 
-      this.board.playCard('playerOne', fixtures.cards.melee_5.slug);
+      this.board.playCard('playerOne', fixtures.cards.melee_4_tight_bond.slug);
       this.board.pass('playerOne');
       this.board.pass('playerTwo');
 

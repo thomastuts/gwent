@@ -129,29 +129,41 @@ class Board extends EventEmitter {
       if (this.playerOne.lives === 0 || this.playerTwo.lives === 0) {
         let isTie = this.playerOne.lives === 0 && this.playerTwo.lives === 0;
         if (isTie) {
-          endGame(constants.OUTCOME_TIE);
+          this.endGame(constants.OUTCOME_TIE);
         }
         else {
-          endGame(outcome);
+          this.endGame(outcome);
         }
       }
       else {
-        this.emit(events.ROUND_END);
+        let nextTurn;
+
+        if (outcome === constants.OUTCOME_TIE) {
+          nextTurn = this.turn === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
+        }
+        else {
+          nextTurn = outcome;
+        }
+
+        this.turn = nextTurn;
+        this.playerOne.passed = false;
+        this.playerTwo.passed = false;
         this.round++;
         this.resetBoardForNextRound();
+        this.emit(events.ROUND_END);
       }
 
       console.log('Score:', this.playerOne.lives, this.playerTwo.lives);
     }
   }
 
+  endGame(outcome) {
+    this.emit(events.GAME_END, outcome);
+  }
+
   resetBoardForNextRound() {
     // Reset battlefield
     // Move all cards in playing field to player's discards
-  }
-
-  endGame(outcome) {
-    this.emit(events.GAME_END, outcome);
   }
 
   determineStartingPlayer() {
