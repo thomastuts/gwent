@@ -1,3 +1,5 @@
+'use strict';
+
 import http from 'http';
 import path from 'path';
 import express from 'express';

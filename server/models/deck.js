@@ -1,3 +1,5 @@
+'use strict';
+
 import _ from 'lodash';
 import constants from '../constants';
 import { getCard } from '../data/cards';

@@ -2,8 +2,7 @@
 
 import _ from 'lodash';
 import path from 'path';
-
-const constants = require('../constants');
+import constants from '../constants';
 
 let cardsByFaction = {};
 let specialCards = require('../../data/cards/special.json');

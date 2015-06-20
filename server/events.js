@@ -1,3 +1,5 @@
+'use strict';
+
 const GAME_CREATE = 'game.create';
 const GAME_START = 'game.start';
 const OPPONENT_JOIN = 'game.opponent.join';

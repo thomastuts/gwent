@@ -1,3 +1,5 @@
+'use strict';
+
 import logger from 'bragi';
 import EventEmitter from 'events';
 
@@ -5,8 +7,6 @@ import constants from '../constants';
 import events from '../events';
 import Player from './player';
 import Battlefield from './battlefield';
-
-// TODO: implement auth on socket to avoid other player playing actions for you
 
 class Board extends EventEmitter {
   constructor(boardId) {
@@ -127,7 +127,7 @@ class Board extends EventEmitter {
         this.playerTwo.lives--;
       }
       else {
-        var loser = outcome === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
+        let loser = outcome === constants.PLAYER_ONE ? constants.PLAYER_TWO : constants.PLAYER_ONE;
         this[loser].lives--;
       }
 

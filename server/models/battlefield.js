@@ -1,3 +1,5 @@
+'use strict';
+
 import _ from 'lodash';
 import constants from '../constants';
 
@@ -51,7 +53,7 @@ class Battlefield {
   }
 
   addUnit(player, card) {
-    var unit = _.cloneDeep(card);
+    let unit = _.cloneDeep(card);
     unit.actualStrength = unit.strength;
     this[player].rows[card.row].units.push(unit);
     this.updateRowStrengths();
@@ -105,7 +107,7 @@ class Battlefield {
           }
         }
 
-        var totalRowScore = _.chain(row.units)
+        let totalRowScore = _.chain(row.units)
           .pluck('actualStrength')
           .reduce(function (total, strength) {
             return total + strength;

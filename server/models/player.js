@@ -1,3 +1,5 @@
+'use strict';
+
 import Deck from './deck';
 
 const STARTING_LIVES = 2;

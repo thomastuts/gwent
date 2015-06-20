@@ -1,3 +1,5 @@
+'use strict';
+
 const DEBUG = process.env.NODE_ENV === 'debug';
 
 const PLAYER_ONE = 'playerOne';
