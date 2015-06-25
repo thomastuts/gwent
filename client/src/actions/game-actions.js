@@ -2,6 +2,7 @@
 
 import Dispatcher from '../dispatcher/app-dispatcher';
 import GameConstants from '../constants/game-constants';
+import Socket from '../data/socket';
 
 export default {
   createGame() {
