@@ -1,14 +1,13 @@
 'use strict';
 
 import _ from 'lodash';
-import path from 'path';
 import constants from '../constants';
 
 let cardsByFaction = {};
-let specialCards = require('../../data/cards/special.json');
+let specialCards = require('./cards/special.json');
 
 constants.FACTIONS.forEach(function (faction) {
-  cardsByFaction[faction] = require(path.join('../../data/cards', faction + '.json'));
+  cardsByFaction[faction] = require('./cards/' + faction + '.json');
 });
 
 export function getCard(cardSlug) {
