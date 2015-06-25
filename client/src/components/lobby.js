@@ -1,12 +1,14 @@
 var React = require('react');
+import GameActions from '../actions/game-actions';
+import GameStore from '../store/game-store';
 
 class Lobby extends React.Component {
   createGame() {
-    console.log('Creating game');
+    GameActions.createGame();
   }
 
   joinGame() {
-    console.log('Joining game');
+    GameActions.joinGame(123);
   }
 
   render() {
