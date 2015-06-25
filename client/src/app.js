@@ -1,10 +1,10 @@
 import React from 'react';
-import Lobby from './components/lobby.js';
+import Game from './components/game';
 
 let socket = io.connect('http://localhost:9090');
 
 React.render(
-  <Lobby />,
+  <Game />,
   document.getElementById('app')
 );
 

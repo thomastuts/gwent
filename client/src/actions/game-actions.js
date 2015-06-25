@@ -5,7 +5,6 @@ import GameConstants from '../constants/game-constants';
 
 export default {
   createGame() {
-    console.log('Created game');
     Dispatcher.dispatch({
       type: GameConstants.CREATE_GAME,
       gameId: 'todo'
@@ -13,7 +12,6 @@ export default {
   },
 
   joinGame(gameId) {
-    console.log('Joined game');
     Dispatcher.dispatch({
       type: GameConstants.JOIN_GAME,
       gameId: gameId
