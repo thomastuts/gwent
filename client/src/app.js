@@ -1,5 +1,6 @@
-let React = require('react');
-let Lobby = require('./components/lobby');
+import React from 'react';
+import Lobby from './components/lobby.js';
+
 let socket = io.connect('http://localhost:9090');
 
 React.render(

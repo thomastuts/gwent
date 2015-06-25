@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 import GameActions from '../actions/game-actions';
 import GameStore from '../store/game-store';
 
