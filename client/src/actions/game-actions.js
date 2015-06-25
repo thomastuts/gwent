@@ -2,13 +2,16 @@
 
 import Dispatcher from '../dispatcher/app-dispatcher';
 import GameConstants from '../constants/game-constants';
+import EVENTS from '../../../common/events';
 import Socket from '../data/socket';
 
 export default {
   createGame() {
-    Dispatcher.dispatch({
-      type: GameConstants.CREATE_GAME,
-      gameId: 'todo'
+    Socket.emit(EVENTS.CREATE_GAME, {}, function (data) {
+      Dispatcher.dispatch({
+        type: GameConstants.CREATE_GAME,
+        gameId: data.gameId
+      });
     });
   },
 

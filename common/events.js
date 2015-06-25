@@ -1,0 +1,11 @@
+'use strict';
+
+const CREATE_GAME = 'CREATE_GAME';
+const JOIN_GAME = 'JOIN_GAME';
+const OPPONENT_JOINED = 'OPPONENT_JOINED';
+
+export default {
+  CREATE_GAME,
+  JOIN_GAME,
+  OPPONENT_JOINED
+};

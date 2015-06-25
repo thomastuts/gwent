@@ -5,6 +5,8 @@ import path from 'path';
 import express from 'express';
 import socket from 'socket.io';
 
+import GameHandler from './handlers/game';
+
 let app = express();
 let server = http.Server(app);
 let io = socket(server);
@@ -16,8 +18,5 @@ app.get('/', function (req, res) {
 });
 
 io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
+  GameHandler(io, socket);
 });
