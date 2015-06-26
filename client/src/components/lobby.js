@@ -3,6 +3,10 @@ import GameActions from '../actions/game-actions';
 import GameStore from '../store/game-store';
 
 class Lobby extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
   createGame() {
     GameActions.createGame();
   }

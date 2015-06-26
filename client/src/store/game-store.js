@@ -11,6 +11,7 @@ const CHANGE_EVENT = 'event';
 let _gameState = GameConstants.GAME_STATE_LOBBY;
 let _game = null;
 let _player = null;
+let _opponent = null;
 
 let GameStore = _.merge({}, EventEmitter.prototype, {
   emitChange() {
@@ -45,6 +46,11 @@ GameStore.dispatchToken = Dispatcher.register((action) => {
     case GameConstants.JOIN_GAME_SUCCESS:
       _game = action.gameId;
       _player = Glossary.PLAYER_TWO;
+      GameStore.emitChange();
+      break;
+    case GameConstants.OPPONENT_JOINED:
+      _opponent = action.opponent;
+      _gameState = GameConstants.GAME_STATE_PLAYING;
       GameStore.emitChange();
       break;
   }

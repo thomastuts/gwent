@@ -5,7 +5,7 @@ import GameConstants from '../constants/game-constants';
 import EVENTS from '../../../common/events';
 import Socket from '../data/socket';
 
-export default {
+var gameActions = {
   createGame() {
     Dispatcher.dispatch({
       type: GameConstants.CREATE_GAME
@@ -43,5 +43,19 @@ export default {
         });
       }
     });
+  },
+
+  opponentJoined(opponent) {
+    console.log('Opponent joined:', opponent);
+    Dispatcher.dispatch({
+      type: GameConstants.OPPONENT_JOINED,
+      opponent
+    });
   }
 };
+
+Socket.on(EVENTS.OPPONENT_JOINED, function (data) {
+  gameActions.opponentJoined(data);
+});
+
+export default gameActions;

@@ -48,6 +48,11 @@ function _joinGame(socket, gameId, callback) {
     game.board.playerTwo.readyUp();
     socket.join(gameId);
 
+    game.playerOne.emit(EVENTS.OPPONENT_JOINED, {
+      name: game.board.playerTwo.name,
+      lives: game.board.playerTwo.lives
+    });
+
     callback({
       success: true
     });
