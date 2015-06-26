@@ -8,6 +8,7 @@ import Glossary from '../../../common/glossary';
 
 const CHANGE_EVENT = 'event';
 
+let _gameState = GameConstants.GAME_STATE_LOBBY;
 let _game = null;
 let _player = null;
 
@@ -31,9 +32,10 @@ let GameStore = _.merge({}, EventEmitter.prototype, {
 
 GameStore.dispatchToken = Dispatcher.register((action) => {
   switch (action.type) {
-    case GameConstants.CREATE_GAME:
+    case GameConstants.CREATE_GAME_SUCCESS:
       _game = action.data;
       _player = Glossary.PLAYER_ONE;
+      _gameState = GameConstants.GAME_STATE_PLAYING;
       GameStore.emitChange();
       break;
     case GameConstants.JOIN_GAME:

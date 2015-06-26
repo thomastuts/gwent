@@ -7,11 +7,22 @@ import Socket from '../data/socket';
 
 export default {
   createGame() {
+    Dispatcher.dispatch({
+      type: GameConstants.CREATE_GAME
+    });
+
     Socket.emit(EVENTS.CREATE_GAME, {}, function (data) {
-      Dispatcher.dispatch({
-        type: GameConstants.CREATE_GAME,
-        data
-      });
+      if (data.success) {
+        Dispatcher.dispatch({
+          type: GameConstants.CREATE_GAME_SUCCESS,
+          data
+        });
+      }
+      else {
+        Dispatcher.dispatch({
+          type: GameConstants.CREATE_GAME_FAIL
+        });
+      }
     });
   },
 
