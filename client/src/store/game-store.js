@@ -35,10 +35,14 @@ GameStore.dispatchToken = Dispatcher.register((action) => {
     case GameConstants.CREATE_GAME_SUCCESS:
       _game = action.data;
       _player = Glossary.PLAYER_ONE;
-      _gameState = GameConstants.GAME_STATE_PLAYING;
+      _gameState = GameConstants.GAME_STATE_WAITING;
       GameStore.emitChange();
       break;
-    case GameConstants.JOIN_GAME:
+    case GameConstants.JOIN_GAME_FAIL:
+      console.log('Oh no error');
+      GameStore.emitChange();
+      break;
+    case GameConstants.JOIN_GAME_SUCCESS:
       _game = action.gameId;
       _player = Glossary.PLAYER_TWO;
       GameStore.emitChange();

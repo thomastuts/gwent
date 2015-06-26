@@ -27,9 +27,21 @@ export default {
   },
 
   joinGame(gameId) {
-    Dispatcher.dispatch({
-      type: GameConstants.JOIN_GAME,
-      gameId: gameId
+    console.log('Joining game', gameId);
+    Socket.emit(EVENTS.JOIN_GAME, {gameId}, function (data) {
+      if (data.success) {
+        console.log('Join game success');
+        Dispatcher.dispatch({
+          type: GameConstants.JOIN_GAME_SUCCESS,
+          gameId: gameId
+        });
+      }
+      else {
+        Dispatcher.dispatch({
+          type: GameConstants.JOIN_GAME_FAIL,
+          gameId: gameId
+        });
+      }
     });
   }
 };

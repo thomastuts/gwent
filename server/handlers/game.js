@@ -24,7 +24,9 @@ function _createGame(socket, callback) {
   };
 
   socket.join(gameId);
+
   callback({
+    success: true,
     gameId,
     deck: board.playerOne.deck
   });
@@ -32,8 +34,37 @@ function _createGame(socket, callback) {
   currentGameId++;
 }
 
+function _joinGame(socket, gameId, callback) {
+  var game = games[gameId];
+
+  if (game) {
+    game.playerTwo = socket;
+
+    game.board.setPlayerTwo({
+      name: 'Opponent'
+    });
+
+    game.board.playerTwo.setDeck(PresetDeck);
+    game.board.playerTwo.readyUp();
+    socket.join(gameId);
+
+    callback({
+      success: true
+    });
+  }
+  else {
+    callback({
+      success: false
+    });
+  }
+}
+
 export default function (io, socket) {
   socket.on(EVENTS.CREATE_GAME, function (data, callback) {
     _createGame(socket, callback);
+  });
+
+  socket.on(EVENTS.JOIN_GAME, function (data, callback) {
+    _joinGame(socket, data.gameId, callback);
   });
 };

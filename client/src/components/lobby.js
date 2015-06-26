@@ -8,7 +8,7 @@ class Lobby extends React.Component {
   }
 
   joinGame() {
-    GameActions.joinGame(123);
+    GameActions.joinGame(1);
   }
 
   render() {

@@ -9,6 +9,7 @@ module.exports = function () {
       './client/index.html'
     ],
     notify: false,
+    ghostMode: false,
     server: {
       baseDir: ['./client', './']
     }
