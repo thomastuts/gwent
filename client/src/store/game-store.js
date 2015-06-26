@@ -32,7 +32,7 @@ let GameStore = _.merge({}, EventEmitter.prototype, {
 GameStore.dispatchToken = Dispatcher.register((action) => {
   switch (action.type) {
     case GameConstants.CREATE_GAME:
-      _game = action.gameId;
+      _game = action.data;
       _player = Glossary.PLAYER_ONE;
       GameStore.emitChange();
       break;

@@ -10,7 +10,7 @@ export default {
     Socket.emit(EVENTS.CREATE_GAME, {}, function (data) {
       Dispatcher.dispatch({
         type: GameConstants.CREATE_GAME,
-        gameId: data.gameId
+        data
       });
     });
   },
