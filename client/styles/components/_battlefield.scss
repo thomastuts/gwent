@@ -1,6 +1,5 @@
 .battlefield {
-  width: calc(100% - #{$player-area-width});
-  flex: auto;
+  flex: 5;
   background-color: blue;
   display: flex;
   flex-direction: column;
@@ -20,12 +19,19 @@
       margin-top: 10px;
     }
 
+    .player-hand {
+      background-color: purple;
+      height: $row-height;
+    }
+
     .row {
       flex: 1;
       border: 1px solid green;
       display: flex;
       position: relative;
       margin-left: 15px;
+      height: $row-height;
+      min-height: $row-height;
 
       .score {
         position: absolute;

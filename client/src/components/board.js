@@ -32,11 +32,7 @@ class Board extends React.Component {
           <div className="weather-effects">
             Weather effects
           </div>
-          <div className="player opponent">
-            <div className="leader">
-              <img src="http://placekitten.com/101/142" alt=""/>
-              <div className="ability">X</div>
-            </div>
+          <div className="player self">
             <div className="info">
               <div className="faction">
                 <div className="icon">X</div>
@@ -45,13 +41,17 @@ class Board extends React.Component {
                 <div className="name">Geralt</div>
                 <div className="faction-name">Northern Realms</div>
                 <div className="resources">
-                  <div className="hand">7 X</div>
+                  <div className="hand">7X</div>
                   <div className="lives">
                     <div className="health active">O</div>
                     <div className="health active">O</div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="leader">
+              <img src="http://placekitten.com/101/142" alt=""/>
+              <div className="ability">X</div>
             </div>
           </div>
         </div>
@@ -89,6 +89,7 @@ class Board extends React.Component {
               <div className="horn-buff"></div>
               <div className="units"></div>
             </div>
+            <div className="player-hand"></div>
           </div>
         </div>
       </div>

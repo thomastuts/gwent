@@ -1,6 +1,5 @@
 .player-area {
-  width: $player-area-width;
-  flex: 1 auto;
+  flex: 2;
   background-color: red;
   display: flex;
   flex-direction: column;
@@ -8,6 +7,33 @@
   .player {
     background-color: green;
     flex: 2;
+    display: flex;
+    flex-direction: column;
+
+    .leader {
+      background-color: red;
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .info {
+      background-color: rgba(#000, .5);
+      height: $row-height;
+      display: flex;
+
+      .resources {
+        display: flex;
+
+        .hand {
+          margin-right: 10px;
+        }
+
+        .health {
+          display: inline-block;
+        }
+      }
+    }
   }
 
   .weather-effects {
