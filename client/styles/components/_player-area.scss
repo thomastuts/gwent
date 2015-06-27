@@ -1,0 +1,17 @@
+.player-area {
+  width: $player-area-width;
+  flex: 1 auto;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+
+  .player {
+    background-color: green;
+    flex: 2;
+  }
+
+  .weather-effects {
+    background-color: orange;
+    flex: 1;
+  }
+}

@@ -1,0 +1,26 @@
+.battlefield {
+  width: calc(100% - #{$player-area-width});
+  flex: auto;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+
+  .area {
+    flex: 1;
+    background-color: deeppink;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      flex: 1;
+      border: 1px solid green;
+      display: flex;
+
+      .horn-buff {
+        width: 80px;
+        background-color: darkslategray;
+      }
+    }
+  }
+}

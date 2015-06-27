@@ -1,5 +1,5 @@
-$color: #eee;
+@import "settings/board";
 
-body {
-  background-color: $color;
-}
+@import "components/board";
+@import "components/player-area";
+@import "components/battlefield";

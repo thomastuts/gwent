@@ -24,6 +24,10 @@ class Game extends React.Component {
   }
 
   render() {
+    return (
+      <Board />
+    );
+    
     if (!this.state.game) {
       return (
         <Lobby />
