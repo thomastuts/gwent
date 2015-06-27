@@ -6,6 +6,7 @@ module.exports = function () {
   browserSync.init({
     files: [
       './client/src/bundle.js',
+      './client/styles/app.css',
       './client/index.html'
     ],
     notify: false,
