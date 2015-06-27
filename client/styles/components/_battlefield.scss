@@ -12,10 +12,33 @@
     display: flex;
     flex-direction: column;
 
+    &.opponent {
+      margin-bottom: 10px;
+    }
+
+    &.self {
+      margin-top: 10px;
+    }
+
     .row {
       flex: 1;
       border: 1px solid green;
       display: flex;
+      position: relative;
+      margin-left: 15px;
+
+      .score {
+        position: absolute;
+        background-color: #fff;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        top: 50%;
+        margin-top: -10px;
+        left: -15px;
+      }
 
       .horn-buff {
         width: 80px;
