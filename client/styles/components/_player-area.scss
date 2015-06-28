@@ -3,6 +3,7 @@
   background-color: red;
   display: flex;
   flex-direction: column;
+  color: #fff;
 
   .player {
     background-color: green;
@@ -11,7 +12,7 @@
     flex-direction: column;
 
     .leader {
-      background-color: red;
+      background-color: teal;
       display: flex;
       align-items: center;
       flex: 1;
