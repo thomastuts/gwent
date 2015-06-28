@@ -10,7 +10,8 @@ class Game extends React.Component {
     super(props);
     this.state = {
       game: GameStore.getActiveGame(),
-      player: GameStore.getActivePlayer()
+      player: GameStore.getActivePlayer(),
+      deck: GameStore.getDeck()
     };
   }
 
@@ -18,16 +19,14 @@ class Game extends React.Component {
     GameStore.onChange(() => {
       this.setState({
         game: GameStore.getActiveGame(),
-        player: GameStore.getActivePlayer()
+        player: GameStore.getActivePlayer(),
+        deck: GameStore.getDeck()
       });
     });
   }
 
   render() {
-    return (
-      <Board />
-    );
-    
+    console.log(this.state.game);
     if (!this.state.game) {
       return (
         <Lobby />
@@ -35,7 +34,7 @@ class Game extends React.Component {
     }
     else {
       return (
-        <Board />
+        <Board deck={this.state.deck} />
       );
     }
   }

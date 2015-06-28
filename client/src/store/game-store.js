@@ -10,6 +10,7 @@ const CHANGE_EVENT = 'event';
 
 let _gameState = GameConstants.GAME_STATE_LOBBY;
 let _game = null;
+let _deck = null;
 let _player = null;
 let _opponent = null;
 
@@ -28,13 +29,18 @@ let GameStore = _.merge({}, EventEmitter.prototype, {
 
   getActivePlayer() {
     return _player;
+  },
+
+  getDeck() {
+    return _deck;
   }
 });
 
 GameStore.dispatchToken = Dispatcher.register((action) => {
   switch (action.type) {
     case GameConstants.CREATE_GAME_SUCCESS:
-      _game = action.data;
+      _game = action.data.gameId;
+      _deck = action.data.deck;
       _player = Glossary.PLAYER_ONE;
       _gameState = GameConstants.GAME_STATE_WAITING;
       GameStore.emitChange();

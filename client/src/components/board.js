@@ -1,9 +1,15 @@
 'use strict';
 
 import React from 'react';
+import Hand from './hand';
 
 class Board extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    console.log(this.props);
     return (
       <div className="board">
         <div className="player-area">
@@ -89,7 +95,7 @@ class Board extends React.Component {
               <div className="horn-buff"></div>
               <div className="units"></div>
             </div>
-            <div className="player-hand"></div>
+            <Hand cards={this.props.deck.hand} />
           </div>
         </div>
       </div>

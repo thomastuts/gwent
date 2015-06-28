@@ -1,0 +1,8 @@
+$thumbnail-ratio: 0.818181818;
+
+.card {
+  height: $row-height;
+  width: $row-height * $thumbnail-ratio;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
