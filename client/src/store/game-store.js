@@ -33,6 +33,10 @@ let GameStore = _.merge({}, EventEmitter.prototype, {
 
   getDeck() {
     return _deck;
+  },
+
+  getStatus() {
+    return _gameState;
   }
 });
 
@@ -43,6 +47,7 @@ GameStore.dispatchToken = Dispatcher.register((action) => {
       _deck = action.data.deck;
       _player = Glossary.PLAYER_ONE;
       _gameState = GameConstants.GAME_STATE_WAITING;
+      console.log('Created game:', _game);
       GameStore.emitChange();
       break;
     case GameConstants.JOIN_GAME_FAIL:
@@ -52,6 +57,7 @@ GameStore.dispatchToken = Dispatcher.register((action) => {
     case GameConstants.JOIN_GAME_SUCCESS:
       _game = action.gameId;
       _player = Glossary.PLAYER_TWO;
+      _gameState = GameConstants.GAME_STATE_PLAYING;
       GameStore.emitChange();
       break;
     case GameConstants.OPPONENT_JOINED:
