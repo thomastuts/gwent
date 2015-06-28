@@ -7,12 +7,12 @@ import PresetDeck from '../../test/preset-deck';
 let currentGameId = 1;
 let games = {};
 
-function _createGame(socket, callback) {
+function _createGame(socket, data, callback) {
   let gameId = currentGameId;
   var board = new Board(currentGameId);
 
   board.setPlayerOne({
-    name: 'Geralt'
+    name: data.playerName
   });
 
   board.playerOne.setDeck(PresetDeck);
@@ -34,14 +34,14 @@ function _createGame(socket, callback) {
   currentGameId++;
 }
 
-function _joinGame(socket, gameId, callback) {
-  var game = games[gameId];
+function _joinGame(socket, data, callback) {
+  var game = games[data.gameId];
 
   if (game) {
     game.playerTwo = socket;
 
     game.board.setPlayerTwo({
-      name: 'Opponent'
+      name: data.playerName
     });
 
     game.board.playerTwo.setDeck(PresetDeck);
@@ -66,10 +66,10 @@ function _joinGame(socket, gameId, callback) {
 
 export default function (io, socket) {
   socket.on(EVENTS.CREATE_GAME, function (data, callback) {
-    _createGame(socket, callback);
+    _createGame(socket, data, callback);
   });
 
   socket.on(EVENTS.JOIN_GAME, function (data, callback) {
-    _joinGame(socket, data.gameId, callback);
+    _joinGame(socket, data, callback);
   });
 };

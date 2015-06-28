@@ -5,22 +5,39 @@ import GameStore from '../store/game-store';
 class Lobby extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      name: 'Geralt'
+    };
   }
   
-  createGame() {
+  createGame = () => {
     GameActions.createGame();
-  }
+  };
 
-  joinGame() {
+  joinGame = () => {
     GameActions.joinGame(1);
-  }
+  };
+
+  setName = (evt) => {
+    this.setState({
+      name: evt.target.value
+    });
+  };
 
   render() {
     return (
       <div>
         <h2>Lobby</h2>
-        <button onClick={this.createGame}>Create game</button>
-        <button onClick={this.joinGame}>Join game</button>
+        <div>
+          <input type="text" value={this.state.name} onChange={this.setName}/>
+        </div>
+        <div>
+          <button onClick={this.createGame}>Create game</button>
+        </div>
+        <div>
+          <button onClick={this.joinGame}>Join game</button>
+        </div>
       </div>
     );
   }

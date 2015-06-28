@@ -6,12 +6,12 @@ import EVENTS from '../../../common/events';
 import Socket from '../data/socket';
 
 var gameActions = {
-  createGame() {
+  createGame(playerName) {
     Dispatcher.dispatch({
       type: GameConstants.CREATE_GAME
     });
 
-    Socket.emit(EVENTS.CREATE_GAME, {}, function (data) {
+    Socket.emit(EVENTS.CREATE_GAME, {playerName}, function (data) {
       if (data.success) {
         Dispatcher.dispatch({
           type: GameConstants.CREATE_GAME_SUCCESS,
@@ -26,9 +26,9 @@ var gameActions = {
     });
   },
 
-  joinGame(gameId) {
+  joinGame(gameId, playerName) {
     console.log('Joining game', gameId);
-    Socket.emit(EVENTS.JOIN_GAME, {gameId}, function (data) {
+    Socket.emit(EVENTS.JOIN_GAME, {gameId, playerName}, function (data) {
       if (data.success) {
         console.log('Join game success');
         Dispatcher.dispatch({

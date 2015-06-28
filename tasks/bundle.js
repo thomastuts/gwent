@@ -19,7 +19,9 @@ var opts = _.assign({}, watchify.args, customOpts);
 var b = watchify(browserify(opts));
 
 // add transformations here
-b.transform(babelify);
+b.transform(babelify.configure({
+  optional: ['es7.classProperties']
+}));
 
 b.on('update', bundle); // on any dep update, runs the bundler
 b.on('log', gutil.log); // output build logs to terminal
