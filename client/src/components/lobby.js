@@ -8,21 +8,28 @@ class Lobby extends React.Component {
     super(props);
 
     this.state = {
-      name: 'Geralt'
+      name: 'Geralt',
+      gameId: ''
     };
   }
   
   createGame = () => {
-    GameActions.createGame();
+    GameActions.createGame(this.state.name);
   };
 
   joinGame = () => {
-    GameActions.joinGame(1);
+    GameActions.joinGame(this.state.gameId, this.state.name);
   };
 
   setName = (evt) => {
     this.setState({
       name: evt.target.value
+    });
+  };
+
+  setGameId = (evt) => {
+    this.setState({
+      gameId: evt.target.value
     });
   };
 
@@ -38,6 +45,7 @@ class Lobby extends React.Component {
             <button onClick={this.createGame}>Create game</button>
           </div>
           <div>
+            <input type="text" value={this.state.gameId} onChange={this.setGameId}/>
             <button onClick={this.joinGame}>Join game</button>
           </div>
         </div>

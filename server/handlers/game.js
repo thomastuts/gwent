@@ -46,7 +46,7 @@ function _joinGame(socket, data, callback) {
 
     game.board.playerTwo.setDeck(PresetDeck);
     game.board.playerTwo.readyUp();
-    socket.join(gameId);
+    socket.join(data.gameId);
 
     game.playerOne.emit(EVENTS.OPPONENT_JOINED, {
       name: game.board.playerTwo.name,
